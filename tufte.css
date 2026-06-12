@@ -7,28 +7,23 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 12.5%;
-    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    background-color: #ddc7a0;
+    font-family: et-book, Palatino, "Palatino Linotype", Georgia, serif;
+    background-color: #ddc7a0 !important;
     color: #111;
     max-width: 1400px;
-    counter-reset: sidenote-counter;
 }
 
-@media (prefers-color-scheme: dark) {
-    body { background-color: #151515; color: #ddd; }
-}
-
-h1 { font-weight: 400; margin-top: 4rem; margin-bottom: 1.5rem; font-size: 3.2rem; line-height: 1; }
-h2 { font-style: italic; font-weight: 400; margin-top: 2.1rem; margin-bottom: 1.4rem; font-size: 2.2rem; line-height: 1; }
-p, dl, ol, ul { font-size: 1.4rem; line-height: 2rem; }
-p { margin-top: 1.4rem; margin-bottom: 1.4rem; padding-right: 0; vertical-align: baseline; }
-section { padding-top: 1rem; padding-bottom: 1rem; }
-section > p, section > footer, section > table { width: 55%; }
+h1 { font-weight: 400; margin-top: 4rem; margin-bottom: 0.5rem; font-size: 3.2rem; }
+h2 { font-style: italic; font-weight: 400; margin-top: 2.1rem; margin-bottom: 1.4rem; font-size: 2.2rem; }
+p, ul { font-size: 1.4rem; line-height: 2rem; }
+section { padding: 1rem 0; }
+section > p, section > ul { width: 55%; }
 article { padding: 5rem 0rem; }
 
-a:link, a:visited { color: inherit; text-underline-offset: 0.1em; text-decoration-thickness: 0.05em; }
+a:link, a:visited { color: inherit; text-decoration: none; border-bottom: 1px solid #111; }
+a:hover { background-color: #111; color: #ddc7a0; }
 
 @media (max-width: 760px) {
-    body { width: 84%; padding-left: 8%; padding-right: 8%; }
-    section > p, section > footer, section > table { width: 100%; }
+    body { width: 90%; padding-left: 5%; }
+    section > p, section > ul { width: 100%; }
 }
