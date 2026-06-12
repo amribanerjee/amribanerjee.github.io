@@ -6,20 +6,27 @@
     <title>Amritesh Banerjee</title>
     <link rel="stylesheet" type="text/css" href="tufte.css" />
     <style>
+        .social-row { display: flex; gap: 15px; margin-bottom: 2rem; }
+        .social-row a { font-size: 1rem; text-decoration: none; color: #333; border-bottom: 1px solid #333; }
         ul.timeline { list-style-type: none; padding: 0; }
         ul.timeline > li { position: relative; padding-left: 20px; margin-bottom: 20px; border-left: 2px solid #555; }
         ul.timeline > li::before { content: ''; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; background: #111; border-radius: 50%; }
-        .logo { width: 150px; height: auto; display: block; margin-bottom: 2rem; }
     </style>
 </head>
 <body>
     <article>
-        <img src="logo.png" alt="Logo" class="logo">
         <h1>Amritesh Banerjee</h1>
+        <div class="social-row">
+            <a href="https://github.com/amribanerjee/">GitHub</a>
+            <a href="https://linkedin.com/in/amri-banerjee">LinkedIn</a>
+            <a href="mailto:amriteshbane@umass.edu">Mail</a>
+        </div>
+
         <section>
             <h2>About Me</h2>
-            <p>I am a researcher and developer specializing in Natural Language Processing, Computer Vision, and algorithmic optimization. Currently preparing for my undergraduate studies at the Manning College of Information and Computer Sciences, UMass Amherst, I focus on the intersection of computational social science and medical imaging. My work emphasizes the development of scalable pipelines to solve complex data challenges. You can view my active projects on my <a href="https://github.com/amribanerjee/">GitHub</a>.</p>
+            <p>I am a researcher and developer specializing in Natural Language Processing, Computer Vision, and algorithmic optimization. Currently preparing for my undergraduate studies at the Manning College of Information and Computer Sciences, UMass Amherst, I focus on the intersection of computational social science and medical imaging. My work emphasizes the development of scalable pipelines to solve complex data challenges.</p>
         </section>
+
         <section>
             <h2>Experience</h2>
             <ul class="timeline">
@@ -27,11 +34,12 @@
                     <strong style="font-size: 1.2em;">Research Intern, NYU Abu Dhabi</strong> <br>
                     <small>February 2026 – Present</small>
                     <p style="margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.5;">
-                        Working under the supervision of Dr. Muhammad Shafique and Dr. Nouhaila Innan at the eBrain Lab; I am leading the development of VoxelSynth-3D, a hybrid-operator voxel synthesis pipeline designed to mitigate metal artifacts in 3D Computed Tomography (CT) scans. My research focuses on engineering a Deterministic Volumetric Refinement model that utilizes adaptive blending and spatial weight formulas to enhance diagnostic clarity and medical imaging fidelity.
+                        Working under the supervision of Dr. Muhammad Shafique and Dr. Nouhaila Innan at the eBrain Lab; I am leading the development of VoxelSynth-3D, a hybrid-operator voxel synthesis pipeline designed to mitigate metal artifacts in 3D Computed Tomography (CT) scans.
                     </p>
                 </li>
             </ul>
         </section>
+
         <section>
             <h2>Publications</h2>
             <p><strong>2026</strong></p>
@@ -47,6 +55,7 @@
                 <li><strong>Banerjee, A.</strong> <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ">Introduction to Python Programming</a>.</li>
             </ul>
         </section>
+
         <section>
             <h2>Awards</h2>
             <p><strong>2025</strong></p>
