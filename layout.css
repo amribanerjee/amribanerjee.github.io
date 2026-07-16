@@ -1,0 +1,57 @@
+.nav-links {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+.nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.hero-split {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+.profile-pic-large {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about-large {
+    flex: 1;
+}
+.about-large h1 {
+    margin-bottom: 0.2rem;
+}
+.about-large .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.about-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif;
+}
+.page-content {
+    margin-top: 2rem;
+}
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+    }
+}
