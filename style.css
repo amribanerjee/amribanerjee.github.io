@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fffff8;
+    color: #111;
+    line-height: 1.6;
+    padding: 2rem;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+.nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.hero-split {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+.profile-pic-large {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about-large {
+    flex: 1;
+}
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #111;
+}
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+}
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #444;
+}
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.social-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #111;
+    border: 1px solid #111;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.social-btn:hover {
+    background-color: #111;
+    color: #fff;
+}
+.section-title {
+    font-size: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+.page-content {
+    margin-top: 2rem;
+}
+.section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.entry-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+.entry-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+}
+.entry-meta {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+}
+.entry-description {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+.year-section {
+    display: flex;
+    gap: 2rem;
+}
+.year-marker {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    width: 60px;
+}
+.year-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.authors {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+.entry-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #111;
+    display: block;
+    margin: 0.25rem 0;
+}
+.entry-title:hover {
+    text-decoration: underline;
+}
+.venue {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+}
+.footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic-large {
+        width: 250px;
+        height: 250px;
+    }
+    .entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .year-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .year-marker {
+        width: auto;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.25rem;
+    }
+}
