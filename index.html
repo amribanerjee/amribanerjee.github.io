@@ -171,9 +171,14 @@
 
             buttons.forEach(button => {
                 button.addEventListener("click", () => {
-                    buttons.forEach(btn => btn.classList.remove("active"));
-                    button.classList.add("active");
-                    applyFilter(button.getAttribute("data-filter"));
+                    if (button.classList.contains("active")) {
+                        button.classList.remove("active");
+                        applyFilter("all");
+                    } else {
+                        buttons.forEach(btn => btn.classList.remove("active"));
+                        button.classList.add("active");
+                        applyFilter(button.getAttribute("data-filter"));
+                    }
                 });
             });
         });
