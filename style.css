@@ -53,8 +53,8 @@ body {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(42, 40, 36, 0.1);
-    border: 2px solid #d8d0c1;
+    box-shadow: 0 8px 24px rgba(42, 40, 36, 0.12);
+    border: 3px solid #d8d0c1;
 }
 .about-large {
     flex: 1;
@@ -144,10 +144,16 @@ h1, h2, h3 {
     display: flex;
     gap: 2rem;
     background-color: #ffffff;
-    border: 1px solid #d8d0c1;
+    border: 1px solid #e8e2d5;
+    border-left: 6px solid #9e8a5f;
     padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(42, 40, 36, 0.03);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(42, 40, 36, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.year-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 40, 36, 0.08);
 }
 .year-marker {
     font-weight: 600;
@@ -219,6 +225,7 @@ h1, h2, h3 {
         flex-direction: column;
         gap: 1.5rem;
         padding: 1.5rem;
+        border-left: 4px solid #9e8a5f;
     }
     .year-marker {
         width: auto;
