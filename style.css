@@ -115,7 +115,7 @@ h1, h2, h3 {
 .entry {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.6rem;
 }
 .entry-header {
     display: flex;
@@ -143,6 +143,11 @@ h1, h2, h3 {
 .year-section {
     display: flex;
     gap: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #d8d0c1;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(42, 40, 36, 0.03);
 }
 .year-marker {
     font-weight: 600;
@@ -150,13 +155,15 @@ h1, h2, h3 {
     font-size: 1.4rem;
     color: #9e8a5f;
     flex-shrink: 0;
-    width: 60px;
+    width: 80px;
+    border-right: 1px solid #d8d0c1;
+    padding-right: 1.5rem;
 }
 .year-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 3rem;
 }
 .authors {
     font-size: 1.1rem;
@@ -210,11 +217,14 @@ h1, h2, h3 {
     }
     .year-section {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.5rem;
+        padding: 1.5rem;
     }
     .year-marker {
         width: auto;
+        border-right: none;
         border-bottom: 1px solid #d8d0c1;
-        padding-bottom: 0.25rem;
+        padding-right: 0;
+        padding-bottom: 0.5rem;
     }
 }
