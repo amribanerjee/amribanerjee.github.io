@@ -70,12 +70,18 @@
 
         <section id="publications" class="page-content">
             <h2 class="section-title">Publications</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="publication">Publications</button>
+                <button class="filter-btn" data-filter="preprint">Preprints</button>
+                <button class="filter-btn" data-filter="book">Books</button>
+            </div>
             <div class="section-body">
                 
                 <div class="year-section">
                     <div class="year-marker">2026</div>
                     <div class="year-content">
-                        <div class="entry">
+                        <div class="entry publication-entry" data-category="publication">
                             <p class="authors"><strong>Banerjee, A.</strong> &amp; Joneja, B.</p>
                             <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" class="entry-title" target="_blank">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</a>
                             <p class="venue"><em>The Convergence Journal</em></p>
@@ -86,7 +92,7 @@
                 <div class="year-section">
                     <div class="year-marker">2025</div>
                     <div class="year-content">
-                        <div class="entry">
+                        <div class="entry publication-entry" data-category="publication">
                             <p class="authors"><strong>Banerjee, A.*</strong> &amp; Roplekar, S.*</p>
                             <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" class="entry-title" target="_blank">Python-Driven CT Scan Image Refinement</a>
                             <p class="venue"><em>Researchory</em></p>
@@ -97,7 +103,7 @@
                 <div class="year-section">
                     <div class="year-marker">2020</div>
                     <div class="year-content">
-                        <div class="entry">
+                        <div class="entry publication-entry" data-category="book">
                             <p class="authors"><strong>Banerjee, A.</strong></p>
                             <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" class="entry-title" target="_blank">Introduction to Python Programming</a>
                         </div>
@@ -127,5 +133,47 @@
             <p>&copy; 2026 Amritesh Banerjee</p>
         </footer>
     </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".filter-btn");
+            const entries = document.querySelectorAll(".publication-entry");
+            const yearSections = document.querySelectorAll("#publications .year-section");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    buttons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+                    
+                    const filterValue = button.getAttribute("data-filter");
+                    
+                    entries.forEach(entry => {
+                        if (filterValue === "all" || entry.getAttribute("data-category") === filterValue) {
+                            entry.style.display = "flex";
+                        } else {
+                            entry.style.display = "none";
+                        }
+                    });
+
+                    yearSections.forEach(section => {
+                        let hasVisible = false;
+                        const sectionEntries = section.querySelectorAll(".publication-entry");
+                        
+                        sectionEntries.forEach(entry => {
+                            if (entry.style.display !== "none") {
+                                hasVisible = true;
+                            }
+                        });
+                        
+                        if (hasVisible) {
+                            section.style.display = "flex";
+                        } else {
+                            section.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
