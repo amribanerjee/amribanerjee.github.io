@@ -112,6 +112,33 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 2.5rem;
 }
+.filter-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid #d8d0c1;
+    color: #736d62;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.filter-btn:hover {
+    border-color: #9e8a5f;
+    color: #2a2824;
+}
+.filter-btn.active {
+    background-color: #9e8a5f;
+    color: #ffffff;
+    border-color: #9e8a5f;
+}
 .entry {
     display: flex;
     flex-direction: column;
