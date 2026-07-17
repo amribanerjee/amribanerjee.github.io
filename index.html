@@ -71,8 +71,7 @@
         <section id="publications" class="page-content">
             <h2 class="section-title">Publications</h2>
             <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="publication">Publications</button>
+                <button class="filter-btn active" data-filter="publication">Publications</button>
                 <button class="filter-btn" data-filter="preprint">Preprints</button>
                 <button class="filter-btn" data-filter="book">Books</button>
             </div>
@@ -140,37 +139,41 @@
             const entries = document.querySelectorAll(".publication-entry");
             const yearSections = document.querySelectorAll("#publications .year-section");
 
+            function applyFilter(filterValue) {
+                entries.forEach(entry => {
+                    if (filterValue === "all" || entry.getAttribute("data-category") === filterValue) {
+                        entry.style.display = "flex";
+                    } else {
+                        entry.style.display = "none";
+                    }
+                });
+
+                yearSections.forEach(section => {
+                    let hasVisible = false;
+                    const sectionEntries = section.querySelectorAll(".publication-entry");
+                    
+                    sectionEntries.forEach(entry => {
+                        if (entry.style.display !== "none") {
+                            hasVisible = true;
+                        }
+                    });
+                    
+                    if (hasVisible) {
+                        section.style.display = "flex";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+            }
+
+            const activeBtn = document.querySelector(".filter-btn.active");
+            if (activeBtn) applyFilter(activeBtn.getAttribute("data-filter"));
+
             buttons.forEach(button => {
                 button.addEventListener("click", () => {
                     buttons.forEach(btn => btn.classList.remove("active"));
                     button.classList.add("active");
-                    
-                    const filterValue = button.getAttribute("data-filter");
-                    
-                    entries.forEach(entry => {
-                        if (filterValue === "all" || entry.getAttribute("data-category") === filterValue) {
-                            entry.style.display = "flex";
-                        } else {
-                            entry.style.display = "none";
-                        }
-                    });
-
-                    yearSections.forEach(section => {
-                        let hasVisible = false;
-                        const sectionEntries = section.querySelectorAll(".publication-entry");
-                        
-                        sectionEntries.forEach(entry => {
-                            if (entry.style.display !== "none") {
-                                hasVisible = true;
-                            }
-                        });
-                        
-                        if (hasVisible) {
-                            section.style.display = "flex";
-                        } else {
-                            section.style.display = "none";
-                        }
-                    });
+                    applyFilter(button.getAttribute("data-filter"));
                 });
             });
         });
