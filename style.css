@@ -7,9 +7,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Cormorant Garamond', serif;
-    background-color: #f4f1ea;
-    color: #2a2824;
+    font-family: 'Lora', serif;
+    background-color: #f8f6f0;
+    color: #1c2821;
     line-height: 1.6;
     padding: 2rem;
 }
@@ -20,25 +20,25 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
-    border-bottom: 1px solid #d8d0c1;
+    border-bottom: 1px solid #dbe0d9;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
     position: sticky;
     top: 0;
-    background-color: #f4f1ea;
+    background-color: #f8f6f0;
     z-index: 100;
 }
 .nav-links a {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-style: italic;
     text-decoration: none;
-    color: #2a2824;
+    color: #1c2821;
     letter-spacing: 0.02em;
     transition: color 0.2s ease;
 }
 .nav-links a:hover {
-    color: #9e8a5f;
+    color: #9c8454;
 }
 .hero-split {
     display: flex;
@@ -53,18 +53,19 @@ body {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 8px 24px rgba(42, 40, 36, 0.12);
-    border: 3px solid #d8d0c1;
+    box-shadow: 0 8px 24px rgba(28, 40, 33, 0.15);
+    border: 3px solid #1b4332;
 }
 .about-large {
     flex: 1;
 }
 h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
-    color: #2a2824;
+    color: #1b4332;
 }
 .title {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 0.2rem;
     letter-spacing: -0.02em;
 }
@@ -73,7 +74,7 @@ h1, h2, h3 {
     font-style: italic;
     margin-bottom: 1.5rem;
     font-size: 1.4rem;
-    color: #9e8a5f;
+    color: #9c8454;
 }
 .about-text {
     font-size: 1.3rem;
@@ -85,21 +86,22 @@ h1, h2, h3 {
     margin-top: 2rem;
 }
 .social-btn {
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-style: italic;
     text-decoration: none;
-    color: #2a2824;
-    border-bottom: 1px solid #9e8a5f;
+    color: #1c2821;
+    border-bottom: 1px solid #1b4332;
     padding-bottom: 0.1rem;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 .social-btn:hover {
-    color: #9e8a5f;
-    border-color: #2a2824;
+    color: #9c8454;
+    border-color: #9c8454;
 }
 .section-title {
-    font-size: 2.2rem;
-    border-bottom: 1px solid #d8d0c1;
+    font-size: 2.4rem;
+    border-bottom: 1px solid #dbe0d9;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
 }
@@ -119,25 +121,25 @@ h1, h2, h3 {
     flex-wrap: wrap;
 }
 .filter-btn {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
     background: transparent;
-    border: 1px solid #d8d0c1;
-    color: #736d62;
-    padding: 0.4rem 1.2rem;
+    border: 1px solid #1b4332;
+    color: #1b4332;
+    padding: 0.4rem 1.4rem;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 .filter-btn:hover {
-    border-color: #9e8a5f;
-    color: #2a2824;
+    border-color: #9c8454;
+    color: #9c8454;
 }
 .filter-btn.active {
-    background-color: #9e8a5f;
+    background-color: #1b4332;
     color: #ffffff;
-    border-color: #9e8a5f;
+    border-color: #1b4332;
 }
 .entry {
     display: flex;
@@ -150,18 +152,21 @@ h1, h2, h3 {
     align-items: baseline;
 }
 .entry-header h3 {
-    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
     margin: 0;
+    color: #1c2821;
 }
 .entry-date {
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-style: italic;
-    color: #9e8a5f;
+    color: #9c8454;
 }
 .entry-meta {
     font-weight: 600;
     font-size: 1.2rem;
-    color: #4a4740;
+    color: #2e4a3b;
 }
 .entry-description {
     margin-top: 0.5rem;
@@ -171,25 +176,26 @@ h1, h2, h3 {
     display: flex;
     gap: 2rem;
     background-color: #ffffff;
-    border: 1px solid #e8e2d5;
-    border-left: 6px solid #9e8a5f;
+    border: 1px solid #dbe0d9;
+    border-left: 6px solid #1b4332;
     padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(42, 40, 36, 0.04);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .year-section:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(42, 40, 36, 0.08);
+    box-shadow: 0 6px 20px rgba(28, 40, 33, 0.1);
 }
 .year-marker {
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-style: italic;
-    font-size: 1.4rem;
-    color: #9e8a5f;
+    font-size: 1.5rem;
+    color: #9c8454;
     flex-shrink: 0;
     width: 80px;
-    border-right: 1px solid #d8d0c1;
+    border-right: 1px solid #dbe0d9;
     padding-right: 1.5rem;
 }
 .year-content {
@@ -200,33 +206,45 @@ h1, h2, h3 {
 }
 .authors {
     font-size: 1.1rem;
-    color: #4a4740;
+    color: #2e4a3b;
 }
 .entry-title {
-    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
-    color: #2a2824;
+    color: #1b4332;
     display: block;
     margin: 0.25rem 0;
     transition: color 0.2s ease;
 }
 .entry-title:hover {
-    color: #9e8a5f;
+    color: #9c8454;
 }
 .venue {
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-style: italic;
-    color: #736d62;
+    color: #5a665f;
+}
+#empty-state {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #5a665f;
+    text-align: center;
+    padding: 3rem 0;
+    display: none;
 }
 .footer {
     margin-top: 6rem;
     text-align: center;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-style: italic;
-    color: #736d62;
+    color: #5a665f;
     padding-top: 2rem;
-    border-top: 1px solid #d8d0c1;
+    border-top: 1px solid #dbe0d9;
 }
 @media (max-width: 768px) {
     body {
@@ -252,12 +270,12 @@ h1, h2, h3 {
         flex-direction: column;
         gap: 1.5rem;
         padding: 1.5rem;
-        border-left: 4px solid #9e8a5f;
+        border-left: 4px solid #1b4332;
     }
     .year-marker {
         width: auto;
         border-right: none;
-        border-bottom: 1px solid #d8d0c1;
+        border-bottom: 1px solid #dbe0d9;
         padding-right: 0;
         padding-bottom: 0.5rem;
     }
