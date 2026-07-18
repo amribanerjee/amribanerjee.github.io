@@ -8,7 +8,7 @@ html {
 }
 body {
     font-family: 'Lora', serif;
-    background-color: #f8f6f0;
+    background-color: #eae5d9;
     color: #1c2821;
     line-height: 1.6;
     padding: 2rem;
@@ -20,12 +20,12 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
-    border-bottom: 1px solid #dbe0d9;
+    border-bottom: 1px solid #d5cebc;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
     position: sticky;
     top: 0;
-    background-color: #f8f6f0;
+    background-color: #eae5d9;
     z-index: 100;
 }
 .nav-links a {
@@ -101,7 +101,7 @@ h1, h2, h3 {
 }
 .section-title {
     font-size: 2.4rem;
-    border-bottom: 1px solid #dbe0d9;
+    border-bottom: 1px solid #d5cebc;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
 }
@@ -175,17 +175,17 @@ h1, h2, h3 {
 .year-section {
     display: flex;
     gap: 2rem;
-    background-color: #ffffff;
-    border: 1px solid #dbe0d9;
+    background-color: #f5f2eb;
+    border: 1px solid #d5cebc;
     border-left: 6px solid #1b4332;
     padding: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.06);
+    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .year-section:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(28, 40, 33, 0.1);
+    box-shadow: 0 6px 20px rgba(28, 40, 33, 0.12);
 }
 .year-marker {
     font-family: 'Playfair Display', serif;
@@ -195,7 +195,7 @@ h1, h2, h3 {
     color: #9c8454;
     flex-shrink: 0;
     width: 80px;
-    border-right: 1px solid #dbe0d9;
+    border-right: 1px solid #d5cebc;
     padding-right: 1.5rem;
 }
 .year-content {
@@ -244,7 +244,7 @@ h1, h2, h3 {
     font-style: italic;
     color: #5a665f;
     padding-top: 2rem;
-    border-top: 1px solid #dbe0d9;
+    border-top: 1px solid #d5cebc;
 }
 @media (max-width: 768px) {
     body {
@@ -275,7 +275,7 @@ h1, h2, h3 {
     .year-marker {
         width: auto;
         border-right: none;
-        border-bottom: 1px solid #dbe0d9;
+        border-bottom: 1px solid #d5cebc;
         padding-right: 0;
         padding-bottom: 0.5rem;
     }
