@@ -19,7 +19,7 @@ body {
 }
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     border-bottom: 1px solid #d5cebc;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
@@ -35,10 +35,15 @@ body {
     text-decoration: none;
     color: #1c2821;
     letter-spacing: 0.02em;
-    transition: color 0.2s ease;
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease, text-decoration-color 0.2s ease;
 }
 .nav-links a:hover {
     color: #9c8454;
+    transform: scale(1.08);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #9c8454;
 }
 .hero-split {
     display: flex;
