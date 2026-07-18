@@ -6,7 +6,7 @@
     <title>Amritesh Banerjee - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -75,8 +75,10 @@
                 <button class="filter-btn" data-filter="preprint">Preprints</button>
                 <button class="filter-btn" data-filter="book">Books</button>
             </div>
+            
+            <div id="empty-state">Currently nothing, check back later.</div>
+
             <div class="section-body">
-                
                 <div class="year-section">
                     <div class="year-marker">2026</div>
                     <div class="year-content">
@@ -108,7 +110,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -138,11 +139,15 @@
             const buttons = document.querySelectorAll(".filter-btn");
             const entries = document.querySelectorAll(".publication-entry");
             const yearSections = document.querySelectorAll("#publications .year-section");
+            const emptyState = document.getElementById("empty-state");
 
             function applyFilter(filterValue) {
+                let totalVisible = 0;
+
                 entries.forEach(entry => {
                     if (filterValue === "all" || entry.getAttribute("data-category") === filterValue) {
                         entry.style.display = "flex";
+                        totalVisible++;
                     } else {
                         entry.style.display = "none";
                     }
@@ -164,6 +169,12 @@
                         section.style.display = "none";
                     }
                 });
+
+                if (totalVisible === 0) {
+                    emptyState.style.display = "block";
+                } else {
+                    emptyState.style.display = "none";
+                }
             }
 
             const activeBtn = document.querySelector(".filter-btn.active");
