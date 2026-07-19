@@ -71,7 +71,8 @@
         <section id="publications" class="page-content">
             <h2 class="section-title">Publications</h2>
             <div class="filter-controls">
-                <button class="filter-btn active" data-filter="publication">Publications</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="publication">Publications</button>
                 <button class="filter-btn" data-filter="preprint">Preprints</button>
                 <button class="filter-btn" data-filter="book">Books</button>
             </div>
@@ -182,8 +183,10 @@
 
             buttons.forEach(button => {
                 button.addEventListener("click", () => {
-                    if (button.classList.contains("active")) {
+                    if (button.classList.contains("active") && button.getAttribute("data-filter") !== "all") {
                         button.classList.remove("active");
+                        const allBtn = document.querySelector(".filter-btn[data-filter='all']");
+                        if (allBtn) allBtn.classList.add("active");
                         applyFilter("all");
                     } else {
                         buttons.forEach(btn => btn.classList.remove("active"));
