@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, observerOptions);
 
-    document.querySelectorAll(".page-content, .hero-split, .focus-interests-grid").forEach(section => {
+    document.querySelectorAll(".page-content, .hero-split").forEach(section => {
         section.style.opacity = "0";
         section.style.transform = "translateY(10px)";
         section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const styleSheet = document.createElement("style");
     styleSheet.type = "text/css";
     styleSheet.innerText = `
-        .page-content.fade-in, .hero-split.fade-in, .focus-interests-grid.fade-in {
+        .page-content.fade-in, .hero-split.fade-in {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
