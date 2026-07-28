@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Publication Filtering Logic
     const buttons = document.querySelectorAll(".filter-btn");
     const entries = document.querySelectorAll(".publication-entry");
     const yearSections = document.querySelectorAll("#publications .year-section");
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Smooth Active Navigation Highlighting on Scroll
     const navLinks = document.querySelectorAll(".nav-links a");
     const sections = document.querySelectorAll("section[id], footer[id]");
 
@@ -87,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", highlightNavOnScroll);
 
-    // Subtle Fade-in on Scroll observer for page sections
     const observerOptions = {
         threshold: 0.05,
         rootMargin: "0px 0px -50px 0px"
@@ -109,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section);
     });
 
-    // Inject active dynamic styling for observer reveal
     const styleSheet = document.createElement("style");
     styleSheet.type = "text/css";
     styleSheet.innerText = `
