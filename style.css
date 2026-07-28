@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Playfair Display', serif !important;
 }
 
 html {
@@ -9,7 +10,6 @@ html {
 }
 
 body {
-    font-family: 'Lora', serif;
     background-color: #eae5d9;
     color: #1c2821;
     line-height: 1.7;
@@ -21,7 +21,6 @@ body {
     margin: 0 auto;
 }
 
-/* Subtle fade-in animation for initial load */
 .fade-in {
     animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -37,7 +36,6 @@ body {
     }
 }
 
-/* Sticky Navigation */
 .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -51,7 +49,6 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     font-style: italic;
     text-decoration: none;
@@ -72,7 +69,6 @@ body {
     text-decoration-color: #9c8454;
 }
 
-/* Hero Section */
 .hero-split {
     display: flex;
     align-items: center;
@@ -97,7 +93,6 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
     font-weight: 600;
     color: #1b4332;
 }
@@ -110,7 +105,6 @@ h1, h2, h3 {
 }
 
 .subtitle {
-    font-family: 'Playfair Display', serif;
     font-weight: 500;
     font-style: italic;
     margin-bottom: 1.5rem;
@@ -124,84 +118,26 @@ h1, h2, h3 {
     color: #2a3830;
 }
 
-/* Social & Academic Links */
 .social-links {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.social-btn {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-style: italic;
-    text-decoration: none;
-    color: #1c2821;
-    border-bottom: 1px solid #1b4332;
-    padding-bottom: 0.1rem;
-    transition: color 0.2s ease, border-color 0.2s ease;
+.social-icon {
+    width: 28px;
+    height: 28px;
+    fill: #1b4332;
+    transition: fill 0.2s ease, transform 0.2s ease;
 }
 
-.social-btn:hover {
-    color: #9c8454;
-    border-color: #9c8454;
+.social-icon:hover {
+    fill: #9c8454;
+    transform: translateY(-2px);
 }
 
-.placeholder-link {
-    color: #7a8680;
-    border-bottom-style: dotted;
-    cursor: default;
-}
-
-.placeholder-link:hover {
-    color: #7a8680;
-    border-color: #7a8680;
-}
-
-/* Focus and Interests Side-by-Side */
-.focus-interests-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-top: 3rem;
-    padding: 2rem;
-    background-color: #f5f2eb;
-    border: 1px solid #d5cebc;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.04);
-}
-
-.sub-section-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #d5cebc;
-    padding-bottom: 0.4rem;
-}
-
-.clean-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.clean-list li {
-    font-family: 'Lora', serif;
-    font-size: 1.05rem;
-    color: #2e4a3b;
-    position: relative;
-    padding-left: 1.2rem;
-}
-
-.clean-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #9c8454;
-}
-
-/* Section Common Styling */
 .section-title {
     font-size: 2.2rem;
     border-bottom: 1px solid #d5cebc;
@@ -220,71 +156,6 @@ h1, h2, h3 {
     gap: 2rem;
 }
 
-/* Featured Research Cards */
-.research-card {
-    background-color: #f5f2eb;
-    border: 1px solid #d5cebc;
-    border-left: 5px solid #1b4332;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.research-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(28, 40, 33, 0.08);
-}
-
-.research-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.8rem;
-}
-
-.research-header h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: #1b4332;
-}
-
-.status-badge {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-style: italic;
-    color: #9c8454;
-    background-color: #eae5d9;
-    padding: 0.2rem 0.8rem;
-    border-radius: 4px;
-    border: 1px solid #d5cebc;
-}
-
-.card-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.2rem;
-}
-
-.action-btn {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-style: italic;
-    text-decoration: none;
-    color: #1b4332;
-    background-color: #eae5d9;
-    border: 1px solid #1b4332;
-    padding: 0.3rem 1rem;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.action-btn:hover {
-    background-color: #1b4332;
-    color: #ffffff;
-}
-
-/* Entries (Experience, Education, etc.) */
 .entry {
     display: flex;
     flex-direction: column;
@@ -303,14 +174,12 @@ h1, h2, h3 {
 }
 
 .entry-header h3 {
-    font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     margin: 0;
     color: #1c2821;
 }
 
 .entry-date {
-    font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
     font-style: italic;
     color: #9c8454;
@@ -329,7 +198,17 @@ h1, h2, h3 {
     color: #33443a;
 }
 
-/* Publications Filter & Cards */
+.entry-description a {
+    color: #1b4332;
+    text-decoration: underline;
+    text-decoration-color: #9c8454;
+    transition: color 0.2s ease;
+}
+
+.entry-description a:hover {
+    color: #9c8454;
+}
+
 .filter-controls {
     display: flex;
     gap: 2rem;
@@ -338,7 +217,6 @@ h1, h2, h3 {
 }
 
 .filter-btn {
-    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-weight: 600;
     font-style: italic;
@@ -385,7 +263,6 @@ h1, h2, h3 {
 }
 
 .year-marker {
-    font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-style: italic;
     font-size: 1.4rem;
@@ -410,31 +287,19 @@ h1, h2, h3 {
 }
 
 .entry-title-heading {
-    font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
     font-weight: 600;
     margin: 0.2rem 0;
-}
-
-.entry-title {
-    text-decoration: none;
     color: #1b4332;
-    transition: color 0.2s ease;
-}
-
-.entry-title:hover {
-    color: #9c8454;
 }
 
 .venue {
-    font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
     font-style: italic;
     color: #5a665f;
     margin-top: 0.3rem;
 }
 
-/* Optional Publication Action Buttons */
 .pub-buttons {
     display: flex;
     gap: 0.8rem;
@@ -442,7 +307,6 @@ h1, h2, h3 {
 }
 
 .pub-btn {
-    font-family: 'Playfair Display', serif;
     font-size: 0.9rem;
     font-style: italic;
     text-decoration: none;
@@ -459,9 +323,7 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-/* Empty State */
 #empty-state {
-    font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
     font-style: italic;
     color: #5a665f;
@@ -469,11 +331,9 @@ h1, h2, h3 {
     padding: 3rem 0;
 }
 
-/* Footer */
 .footer {
     margin-top: 5rem;
     text-align: center;
-    font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
     font-style: italic;
     color: #5a665f;
@@ -481,7 +341,6 @@ h1, h2, h3 {
     border-top: 1px solid #d5cebc;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     body {
         padding: 1.5rem 1rem;
@@ -497,11 +356,6 @@ h1, h2, h3 {
     }
     .social-links {
         justify-content: center;
-    }
-    .focus-interests-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 1.5rem;
     }
     .entry-header {
         flex-direction: column;
