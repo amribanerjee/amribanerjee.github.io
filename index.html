@@ -3,37 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amritesh Banerjee - Portfolio</title>
+    <title>Amritesh Banerjee — AI Evaluation & Trustworthy AI Research</title>
+    <meta name="description" content="Personal academic website of Amritesh Banerjee, incoming undergraduate researcher at UMass Amherst Manning CICS, focusing on AI evaluation, multi-agent systems, biomedical AI, and graph machine learning.">
+    
+    <!-- OpenGraph / Social Meta -->
+    <meta property="og:title" content="Amritesh Banerjee — AI Evaluation & Trustworthy AI Research">
+    <meta property="og:description" content="Incoming undergraduate researcher at UMass Amherst CICS. Researching AI evaluation, multi-agent systems, and trustworthy AI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amribanerjee.github.io/">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Amritesh Banerjee — AI Evaluation & Trustworthy AI">
+    <meta name="twitter:description" content="Incoming undergraduate researcher at UMass Amherst CICS. AI Evaluation, Multi-Agent Systems, Biomedical AI.">
+
+    <!-- Favicon Support -->
+    <link rel="icon" type="image/png" href="DSC_41191.JPG">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data (Schema.org Person) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Amritesh Banerjee",
+      "url": "https://amribanerjee.github.io/",
+      "image": "https://amribanerjee.github.io/DSC_41191.JPG",
+      "jobTitle": "Incoming Undergraduate Researcher",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Massachusetts Amherst"
+      },
+      "sameAs": [
+        "https://github.com/amribanerjee/",
+        "https://linkedin.com/in/amri-banerjee"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence Evaluation",
+        "Multi-Agent Systems",
+        "Biomedical AI",
+        "Graph Machine Learning",
+        "Trustworthy AI"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <main class="container">
-        <nav class="nav-links">
+    <main class="container fade-in">
+        <nav class="nav-links" aria-label="Main Navigation">
             <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
             <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href="#awards">Awards</a>
         </nav>
 
-        <section id="about" class="hero-split">
-            <img src="DSC_41191.JPG" alt="Amritesh Banerjee" class="profile-pic-large">
+        <section id="about" class="hero-split" aria-label="About Me">
+            <img src="DSC_41191.JPG" alt="Portrait of Amritesh Banerjee" class="profile-pic-large">
             <div class="about-large">
                 <h1 class="title">Amritesh Banerjee</h1>
-                <p class="subtitle">Researcher & Developer</p>
-                <p class="about-text">I am a researcher and developer specializing in <strong>Natural Language Processing, Computer Vision, and algorithmic optimization</strong>. Currently preparing for my undergraduate studies at the Manning College of Information and Computer Sciences, UMass Amherst, I focus on the intersection of computational social science and medical imaging. My work emphasizes the development of scalable pipelines to solve complex data challenges.</p>
+                <p class="subtitle">AI Evaluation • Multi-Agent Systems • Biomedical AI</p>
+                <p class="about-text">
+                    I am an incoming undergraduate researcher at the Manning College of Information and Computer Sciences, University of Massachusetts Amherst. My research focuses on AI evaluation, collaborative language models, biomedical AI, and graph machine learning. I develop benchmarks, evaluation frameworks, and scalable machine learning systems for trustworthy artificial intelligence. I am currently a Research Intern at the eBrain Lab, New York University Abu Dhabi.
+                </p>
                 
-                <div class="social-links">
-                    <a href="https://github.com/amribanerjee/" target="_blank" class="social-btn">GitHub</a>
-                    <a href="https://linkedin.com/in/amri-banerjee" target="_blank" class="social-btn">LinkedIn</a>
-                    <a href="mailto:amriteshbane@umass.edu" class="social-btn">Mail</a>
+                <div class="social-links" aria-label="Academic Profiles and Socials">
+                    <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="social-btn">GitHub</a>
+                    <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
+                    <a href="mailto:amriteshbane@umass.edu" class="social-btn">Email</a>
+                    <span class="social-btn placeholder-link" title="Coming soon">Google Scholar</span>
+                    <span class="social-btn placeholder-link" title="Coming soon">ORCID</span>
                 </div>
             </div>
         </section>
 
+        <!-- Current Focus & Research Interests Side-by-Side Grid -->
+        <section class="focus-interests-grid">
+            <div class="focus-box">
+                <h2 class="sub-section-title">Current Focus</h2>
+                <ul class="clean-list">
+                    <li>GraphBioBench</li>
+                    <li>AI Evaluation</li>
+                    <li>Biomedical Language Models</li>
+                </ul>
+            </div>
+            <div class="interests-box">
+                <h2 class="sub-section-title">Research Interests</h2>
+                <ul class="clean-list">
+                    <li>Artificial Intelligence Evaluation</li>
+                    <li>Multi-Agent Systems</li>
+                    <li>Biomedical AI</li>
+                    <li>Graph Machine Learning</li>
+                    <li>Trustworthy AI</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Featured Research -->
+        <section id="research" class="page-content">
+            <h2 class="section-title">Featured Research</h2>
+            <div class="section-body">
+                
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>Conversations Matter: GraphBioBench</h3>
+                        <span class="status-badge">Coming Soon</span>
+                    </div>
+                    <p class="entry-description">Benchmark for evaluating collaborative reasoning in biomedical multi-agent language models.</p>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>Trajectory Behavioral Fingerprinting</h3>
+                    </div>
+                    <p class="entry-description">Evaluation framework for autonomous language model agents.</p>
+                    <div class="card-actions">
+                        <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="action-btn">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>Political Polarization Analysis</h3>
+                    </div>
+                    <p class="entry-description">Computational analysis of semantic polarization in U.S. political discourse.</p>
+                    <div class="card-actions">
+                        <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="action-btn">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications" class="page-content">
+            <h2 class="section-title">Publications</h2>
+            <div class="filter-controls" role="toolbar" aria-label="Publication filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="publication">Publications</button>
+                <button class="filter-btn" data-filter="preprint">Preprints</button>
+                <button class="filter-btn" data-filter="book">Books</button>
+            </div>
+            
+            <div id="empty-state" style="display: none;">Currently nothing, check back later.</div>
+
+            <div class="section-body">
+                <div class="year-section">
+                    <div class="year-marker">2026</div>
+                    <div class="year-content">
+                        
+                        <div class="entry publication-entry" data-category="publication">
+                            <p class="authors"><strong>Banerjee, A.*</strong> &amp; Raichura, P.*</p>
+                            <h3 class="entry-title-heading">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
+                            <p class="venue"><em>Accepted at AIMS Workshop, COLM 2026</em></p>
+                            <div class="pub-buttons">
+                                <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="pub-btn">Code</a>
+                            </div>
+                        </div>
+
+                        <div class="entry publication-entry" data-category="preprint">
+                            <p class="authors"><strong>Banerjee, A.</strong></p>
+                            <h3 class="entry-title-heading">
+                                <a href="https://zenodo.org/records/21515798" class="entry-title" target="_blank" rel="noopener">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</a>
+                            </h3>
+                            <p class="venue"><em>Zenodo Preprint</em></p>
+                            <div class="pub-buttons">
+                                <a href="https://zenodo.org/records/21515798" target="_blank" rel="noopener" class="pub-btn">Paper</a>
+                            </div>
+                        </div>
+
+                        <div class="entry publication-entry" data-category="publication">
+                            <p class="authors"><strong>Banerjee, A.</strong> &amp; Joneja, B.</p>
+                            <h3 class="entry-title-heading">
+                                <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" class="entry-title" target="_blank" rel="noopener">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</a>
+                            </h3>
+                            <p class="venue"><em>The Convergence Journal</em></p>
+                            <div class="pub-buttons">
+                                <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="pub-btn">Paper</a>
+                                <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="pub-btn">Code</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="year-section">
+                    <div class="year-marker">2025</div>
+                    <div class="year-content">
+                        <div class="entry publication-entry" data-category="publication">
+                            <p class="authors"><strong>Banerjee, A.*</strong> &amp; Roplekar, S.*</p>
+                            <h3 class="entry-title-heading">
+                                <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" class="entry-title" target="_blank" rel="noopener">Python-Driven CT Scan Image Refinement</a>
+                            </h3>
+                            <p class="venue"><em>Researchory</em></p>
+                            <div class="pub-buttons">
+                                <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="pub-btn">Paper</a>
+                                <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="pub-btn">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="year-section">
+                    <div class="year-marker">2020</div>
+                    <div class="year-content">
+                        <div class="entry publication-entry" data-category="book">
+                            <p class="authors"><strong>Banerjee, A.</strong></p>
+                            <h3 class="entry-title-heading">
+                                <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" class="entry-title" target="_blank" rel="noopener">Introduction to Python Programming</a>
+                            </h3>
+                            <div class="pub-buttons">
+                                <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="pub-btn">Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="page-content">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-body">
+                <div class="entry">
+                    <div class="entry-header">
+                        <h3>Incoming Undergraduate Researcher</h3>
+                        <span class="entry-date">September 2026 – Present</span>
+                    </div>
+                    <div class="entry-meta">BioNLP Lab, Manning College of Information and Computer Sciences, University of Massachusetts Amherst</div>
+                    <p class="entry-description">Joining the BioNLP Lab to conduct research on natural language processing, automated evaluation frameworks, and intelligent systems under faculty mentorship.</p>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <h3>Research Intern</h3>
+                        <span class="entry-date">February 2026 – Present</span>
+                    </div>
+                    <div class="entry-meta">eBrain Lab, New York University Abu Dhabi</div>
+                    <p class="entry-description">Working under the supervision of Dr. Muhammad Shafique and Dr. Nouhaila Innan on machine learning methods for biomedical imaging and CT reconstruction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
         <section id="education" class="page-content">
             <h2 class="section-title">Education</h2>
             <div class="section-body">
@@ -42,7 +261,7 @@
                         <h3>University of Massachusetts Amherst</h3>
                         <span class="entry-date">September 2026 – May 2030</span>
                     </div>
-                    <div class="entry-meta">BSc. in Computer Science</div>
+                    <div class="entry-meta">BSc. in Computer Science (Manning College of Information and Computer Sciences)</div>
                 </div>
                 <div class="entry">
                     <div class="entry-header">
@@ -54,158 +273,26 @@
             </div>
         </section>
 
-        <section id="experience" class="page-content">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-body">
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Research Intern</h3>
-                        <span class="entry-date">February 2026 – Present</span>
-                    </div>
-                    <div class="entry-meta">NYU Abu Dhabi (eBrain Lab)</div>
-                    <p class="entry-description">Working under the supervision of Dr. Muhammad Shafique and Dr. Nouhaila Innan at the eBrain Lab; I am leading the development of <strong>VoxelSynth-3D</strong>, a hybrid-operator voxel synthesis pipeline designed to mitigate metal artifacts in 3D Computed Tomography (CT) scans.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications" class="page-content">
-            <h2 class="section-title">Publications</h2>
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="publication">Publications</button>
-                <button class="filter-btn" data-filter="preprint">Preprints</button>
-                <button class="filter-btn" data-filter="book">Books</button>
-            </div>
-            
-            <div id="empty-state">Currently nothing, check back later.</div>
-
-            <div class="section-body">
-                <div class="year-section">
-                    <div class="year-marker">2026</div>
-                    <div class="year-content">
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors">Raichura, P.* &amp; <strong>Banerjee, A.*</strong></p>
-                            <span class="entry-title">Measuring Cross-Task Behavioral Consistency in Language Model Agents</span>
-                            <p class="venue"><em>Accepted at AIMS Workshop, COLM 2026</em></p>
-                        </div>
-                        <div class="entry publication-entry" data-category="preprint">
-                            <p class="authors"><strong>Banerjee, A.</strong></p>
-                            <a href="https://zenodo.org/records/21515798" class="entry-title" target="_blank">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</a>
-                            <p class="venue"><em>Zenodo Preprint</em></p>
-                        </div>
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors"><strong>Banerjee, A.</strong> &amp; Joneja, B.</p>
-                            <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" class="entry-title" target="_blank">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</a>
-                            <p class="venue"><em>The Convergence Journal</em></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="year-section">
-                    <div class="year-marker">2025</div>
-                    <div class="year-content">
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors"><strong>Banerjee, A.*</strong> &amp; Roplekar, S.*</p>
-                            <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" class="entry-title" target="_blank">Python-Driven CT Scan Image Refinement</a>
-                            <p class="venue"><em>Researchory</em></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="year-section">
-                    <div class="year-marker">2020</div>
-                    <div class="year-content">
-                        <div class="entry publication-entry" data-category="book">
-                            <p class="authors"><strong>Banerjee, A.</strong></p>
-                            <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" class="entry-title" target="_blank">Introduction to Python Programming</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Awards -->
         <section id="awards" class="page-content">
             <h2 class="section-title">Awards</h2>
             <div class="section-body">
-                
                 <div class="year-section">
                     <div class="year-marker">2025</div>
                     <div class="year-content">
                         <div class="entry">
-                            <p class="entry-title">Second Place, 15th Annual RIT Dubai Software Engineering Competition.</p>
+                            <h3 class="entry-title-heading" style="font-size: 1.3rem;">Second Place, 15th Annual RIT Dubai Software Engineering Competition</h3>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         
         <footer class="footer">
-            <p>&copy; 2026 Amritesh Banerjee</p>
+            <p>&copy; 2026 Amritesh Banerjee. All rights reserved.</p>
         </footer>
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const buttons = document.querySelectorAll(".filter-btn");
-            const entries = document.querySelectorAll(".publication-entry");
-            const yearSections = document.querySelectorAll("#publications .year-section");
-            const emptyState = document.getElementById("empty-state");
-
-            function applyFilter(filterValue) {
-                let totalVisible = 0;
-
-                entries.forEach(entry => {
-                    if (filterValue === "all" || entry.getAttribute("data-category") === filterValue) {
-                        entry.style.display = "flex";
-                        totalVisible++;
-                    } else {
-                        entry.style.display = "none";
-                    }
-                });
-
-                yearSections.forEach(section => {
-                    let hasVisible = false;
-                    const sectionEntries = section.querySelectorAll(".publication-entry");
-                    
-                    sectionEntries.forEach(entry => {
-                        if (entry.style.display !== "none") {
-                            hasVisible = true;
-                        }
-                    });
-                    
-                    if (hasVisible) {
-                        section.style.display = "flex";
-                    } else {
-                        section.style.display = "none";
-                    }
-                });
-
-                if (totalVisible === 0) {
-                    emptyState.style.display = "block";
-                } else {
-                    emptyState.style.display = "none";
-                }
-            }
-
-            const activeBtn = document.querySelector(".filter-btn.active");
-            if (activeBtn) applyFilter(activeBtn.getAttribute("data-filter"));
-
-            buttons.forEach(button => {
-                button.addEventListener("click", () => {
-                    if (button.classList.contains("active") && button.getAttribute("data-filter") !== "all") {
-                        button.classList.remove("active");
-                        const allBtn = document.querySelector(".filter-btn[data-filter='all']");
-                        if (allBtn) allBtn.classList.add("active");
-                        applyFilter("all");
-                    } else {
-                        buttons.forEach(btn => btn.classList.remove("active"));
-                        button.classList.add("active");
-                        applyFilter(button.getAttribute("data-filter"));
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
