@@ -142,7 +142,7 @@ h1, h2, h3 {
     font-size: 2.2rem;
     border-bottom: 1px solid #d5cebc;
     padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .page-content {
@@ -153,18 +153,13 @@ h1, h2, h3 {
 .section-body {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .entry {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    background-color: #f5f2eb;
-    border: 1px solid #d5cebc;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.03);
 }
 
 .entry-header {
@@ -247,19 +242,7 @@ h1, h2, h3 {
 .year-section {
     display: flex;
     gap: 2rem;
-    background-color: #f5f2eb;
-    border: 1px solid #d5cebc;
-    border-left: 6px solid #1b4332;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(28, 40, 33, 0.04);
     margin-bottom: 2rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.year-section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(28, 40, 33, 0.08);
 }
 
 .year-marker {
@@ -320,7 +303,7 @@ h1, h2, h3 {
 
 .pub-btn:hover {
     background-color: #1b4332;
-    color: #ffffff;
+    color: #eae5d9;
 }
 
 #empty-state {
@@ -365,8 +348,6 @@ h1, h2, h3 {
     .year-section {
         flex-direction: column;
         gap: 1rem;
-        padding: 1.5rem;
-        border-left: 4px solid #1b4332;
     }
     .year-marker {
         width: auto;
