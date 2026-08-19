@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amritesh Banerjee | AI Researcher</title>
     
+    <!-- Theme FOUC Prevention Script -->
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -13,23 +14,28 @@
         }
     </script>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
 </head>
 <body class="antialiased selection:bg-muted selection:text-background min-h-screen">
     
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a class="text-lg font-medium tracking-tight hover:text-muted transition-colors text-foreground" href="#">Amritesh Banerjee</a>
                 
                 <div class="flex items-center gap-4 md:gap-8">
+                    <!-- Desktop Links -->
                     <div class="hidden md:flex items-center gap-8">
                         <a href="#about" class="text-sm text-muted hover:text-foreground transition-colors">About</a>
                         <a href="#books" class="text-sm text-muted hover:text-foreground transition-colors">Books</a>
@@ -38,8 +44,11 @@
                         <a href="#education" class="text-sm text-muted hover:text-foreground transition-colors">Education</a>
                     </div>
                     
+                    <!-- Theme Toggle (Always Visible) -->
                     <button id="theme-toggle" class="text-muted hover:text-foreground transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
+                        <!-- Sun Icon (Hidden in Light Mode, Block in Dark Mode) -->
                         <svg id="theme-toggle-light-icon" class="hidden dark:block w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-4.22 4.22a1 1 0 011.415 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm4.22-4.22a1 1 0 010 1.415L7.512 8.62a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                        <!-- Moon Icon (Block in Light Mode, Hidden in Dark Mode) -->
                         <svg id="theme-toggle-dark-icon" class="block dark:hidden w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
                     </button>
                 </div>
@@ -49,6 +58,7 @@
 
     <main class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-24 space-y-32">
         
+        <!-- About Section -->
         <section id="about" class="flex flex-col md:flex-row gap-12 items-start pt-16 observe-fade">
             <div class="w-full md:w-2/5 flex-shrink-0">
                 <div class="relative aspect-[3/4] w-full overflow-hidden bg-card shadow-2xl transition-colors duration-300">
@@ -81,6 +91,7 @@
             </div>
         </section>
 
+        <!-- Books Section -->
         <section id="books" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Books</h2>
             <div class="space-y-16">
@@ -118,6 +129,7 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Experience</h2>
             <div class="space-y-12">
@@ -141,10 +153,12 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
         <section id="publications" class="pt-12 border-t border-border observe-fade">
             <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-12 gap-6">
                 <h2 class="text-3xl font-light tracking-tight text-foreground">Selected Publications</h2>
                 
+                <!-- Filter Controls -->
                 <div class="flex gap-4">
                     <button class="pub-filter-btn text-sm font-medium border-b border-foreground text-foreground pb-1 focus:outline-none transition-colors" data-filter="all">All</button>
                     <button class="pub-filter-btn text-sm font-medium border-b border-transparent text-muted hover:text-foreground pb-1 focus:outline-none transition-colors" data-filter="published">Published</button>
@@ -154,6 +168,7 @@
 
             <div class="space-y-8" id="publications-container">
                 
+                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
@@ -161,14 +176,15 @@
                         <h3 class="text-lg font-medium leading-tight text-foreground">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
                         <p class="text-muted font-light italic">Accepted at IEEE EMBS International Conference on Biomedical and Health Informatics (BHI 2026)</p>
                         <div class="pt-2 flex gap-3">
-                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
                         </div>
                         <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
-                            This paper introduces VoxelSynth3D, a novel hybrid-operator synthesis pipeline designed to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans. Accompanying the pipeline is the Synthetic CLINIC Benchmark, engineered to evaluate image-domain artifact reduction models with rigorous clinical fidelity.
+                            Metal artifacts in postoperative musculoskeletal CT can obscure bone–implant and adjacent soft-tissue interfaces, limiting assessment of implant position, fracture fixation, loosening, infection, and periprosthetic complications. Many metal artifact reduction (MAR) methods either require raw projection access that is unavailable in retrospective reconstructed CT studies or rely on learned models whose behavior may shift across scanner protocols and implant appearances. We present VoxelSynth3D, a training-free 3D image-domain MAR framework for reconstructed CT. The method localizes correction to an implant-adaptive artifact support and uses inspectable support masks, normalized tissue priors, deviation-gated blending weights, and restricted edge-guided refinement to suppress artifacts while limiting changes to unaffected anatomy. We also construct a paired synthetic CLINIC-Metal benchmark from nometal CTPelvic1K pelvic CT volumes with clean targets, metal and artifact masks, reproducible implant insertion, and patientlevel splits. Because real metal CT lacks paired clean targets, 75 real CLINIC-metal cases are evaluated only with qualitative and no-reference metrics. The reported configuration was fixed as a conservative operating point inside a near-flat validation basin. On 40 synthetic test cases, VoxelSynth3D achieved lower artifactROI RMSE than the main comparators (785.43 HU versus 811.86 HU for input, 802.21 HU for pseudo LI-MAR, and 803.10 HU for InDuDoNet) and the highest ROI MSE reduction among them (6.33%). Paired ROI-RMSE testing favored VoxelSynth3D over each comparator after Holm correction, with the largest gains in high-artifact-size cases. These results support VoxelSynth3D as an interpretable reconstructed-volume MAR approach and provide a reproducible paired benchmark for future studies.
                         </div>
                     </div>
                 </div>
 
+                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
@@ -178,7 +194,7 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://arxiv.org/abs/2608.13598" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
-                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
                         </div>
                         <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
                             Agent evaluation relies almost entirely on outcome metrics such as success rate, which capture whether an agent succeeds but not how consistently it behaves. We argue that behavioral consistency across tasks is a distinct and measurable property, and we introduce the Behavioral Consistency Metric (BCM) to quantify it. BCM trains a model to predict task success from behavioral features of agent execution traces, derives a per-trajectory feature-attribution vector, and measures the mean pairwise similarity of these vectors within an agent system. Across roughly 9,000 trajectories from six language model agents on software engineering tasks, our central finding is that cross-task and within-task consistency are distinct axes that can diverge: some systems are locally reproducible, behaving similarly on repeated attempts at one task, yet globally fragmented, with no stable strategy across different tasks, while others are consistent at both scales. Prior work measures only same-task reproducibility and so cannot observe this separation. We further find that consistency is not reducible to success rate, since systems with comparable success can differ sharply in consistency, and that the frontier-versus-open-source consistency gap persists under a within-task control that holds task difficulty constant. We position BCM as a process-level reliability signal that complements outcome metrics, and we are explicit about the conditions under which it is meaningful.
@@ -186,6 +202,7 @@
                     </div>
                 </div>
 
+                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="preprint">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
@@ -195,7 +212,7 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
-                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
                         </div>
                         <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
                             The integration of iterative LLMs within multi-agent diagnostic frameworks requires a rigorous quantitative reevaluation of underlying communication topologies. Frequently used architectural paradigms depend on scale-free or small-world networks, assuming optimal communication efficiency. Our study mathematically dismantles that assumption for semantic data. By mapping multi-agent communication uncertainty trajectories onto a 768-dimensional Bio_ClinicalBERT embedding space via an analytical isotropic variance proxy using Barabási&ndash;Albert (BA) and Watts&ndash;Strogatz (WS) networks, we prove that structural bottlenecks compromise diagnostic safety. Our phase transition matrices illustrate that localized dense cliques confine hallucinated data, preventing global consensus and forcing the system toward a permanent entropy saturation threshold of H<sub>&infin;</sub> &approx; 5.947. As a result, we measure a severe terminal cosine similarity degradation of 53.29%, completely overwriting the original ground-truth. Moreover, the terminal semantic drift reveals a catastrophic variance amplification of 51.81% (&rho; = 1.5181) in highly clustered architectures, proving total system unpredictability when compared to Erdős&ndash;Rényi configurations (&rho; = 1.0766). Instead of reducing errors, hub-centric systems autonomously compound localized hallucinations. By introducing dynamic spectral monitoring operating at an O(N<sup>3</sup>) time complexity and imposing a strict lower bound on algebraic connectivity (&lambda;<sub>2 min</sub>) via the continuous eigen-decomposition of the graph Laplacian, we present a mathematically rigorous technique to ensure global state diffusion. Securing the reliability of autonomous medical diagnostics necessitates treating topological stability as a non-negotiable quantitative imperative.
@@ -203,6 +220,7 @@
                     </div>
                 </div>
 
+                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
@@ -212,7 +230,7 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
-                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
                         </div>
                         <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
                             This research investigates the evolution of U.S. political rhetoric over the past eighty years, focusing on how thematic priorities and emotional framing have influenced partisan discourse. The study applies computational methods, including semantic similarity and sentiment analysis, to presidential nomination speeches from 1944 to 2024, with the aim of understanding patterns of ideological alignment, divergence, and rhetorical strategy. Beyond identifying these patterns in party messaging, the research examines how differences in thematic emphasis and emotional tone shape voter perception, engagement and political polarization. By combining quantitative linguistic analysis with historical and political context, the study provides insight into the mechanisms through which political language both mirrors and reinforces broader social and ideological divisions in the United States.
@@ -220,6 +238,7 @@
                     </div>
                 </div>
 
+                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2025</span>
                     <div class="space-y-2">
@@ -229,7 +248,7 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
-                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
                         </div>
                         <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
                             This study investigates the application of Artificial Intelligence (AI) in Computed Topography (CT) scans to enhance the image quality; this paper will also address the limitations in traditional methods and human interpretation. Utilizing Python, this research uses common AI-driven reconstruction techniques to reduce noise and remove artifacts from image scans. The methodology’s primary focus is to develop algorithms that leverage machine learning to identify and evaluate image patterns and optimize the reconstruction parameters. The results indicate that AI-powered reconstruction techniques significantly boost the image quality, yielding sharper images and a considerable reduction in noise and artifacts when compared with conventional methods. This facilitates improved pattern recognition and could aid in the detection of subtle features. This study highlights the potential of Python-based AI solutions to overcome current obstacles in image refinement and offers a promising avenue for more reliable computer-aided diagnostics.
@@ -240,6 +259,7 @@
             </div>
         </section>
 
+        <!-- Education & Awards Section -->
         <section id="education" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Education &amp; Awards</h2>
             <div class="space-y-12">
@@ -275,6 +295,7 @@
             </div>
         </section>
 
+        <!-- Footer -->
         <footer class="pt-12 border-t border-border flex justify-between items-center text-sm text-muted observe-fade">
             <p>&copy; 2026 Amritesh Banerjee</p>
             <div class="flex gap-6">
