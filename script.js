@@ -1,22 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // Theme Toggle Logic
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
     const themeToggleBtn = document.getElementById('theme-toggle');
 
-    // Display correct icon based on initial theme applied by FOUC script
-    if (document.documentElement.classList.contains('dark')) {
-        themeToggleLightIcon.classList.remove('hidden');
-    } else {
-        themeToggleDarkIcon.classList.remove('hidden');
-    }
-
     themeToggleBtn.addEventListener('click', function() {
-        // Toggle SVGs
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
-
         // Check and apply local storage settings
         if (localStorage.getItem('theme')) {
             if (localStorage.getItem('theme') === 'light') {
