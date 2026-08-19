@@ -1,203 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amritesh Banerjee - Portfolio</title>
+    <title>Amritesh Banerjee | AI Researcher</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
 </head>
-<body>
-    <main class="container fade-in">
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#publications">Publications</a>
-            <a href="#education">Education</a>
-            <a href="#awards">Awards</a>
-        </nav>
-
-        <section id="about" class="hero-split">
-            <img src="DSC_41191.JPG" alt="Amritesh Banerjee" class="profile-pic-large">
-            <div class="about-large">
-                <h1 class="title">Amritesh Banerjee</h1>
-                <p class="subtitle">Undergraduate AI Researcher</p>
-                <p class="about-text">I am an incoming undergraduate researcher at the Manning College of Information and Computer Sciences, University of Massachusetts Amherst. My research focuses on AI evaluation, collaborative language models, biomedical AI, and graph machine learning. I develop benchmarks, evaluation frameworks, and scalable machine learning systems for trustworthy artificial intelligence.</p>
-                
-                <div class="social-links">
-                    <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" title="GitHub">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" title="LinkedIn">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:amriteshbane@umass.edu" title="Email">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
-                        </svg>
-                    </a>
+<body class="antialiased selection:bg-neutral-800 selection:text-neutral-100 min-h-screen">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-border">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a class="text-lg font-medium tracking-tight hover:text-muted transition-colors" href="#">Amritesh Banerjee</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm text-muted hover:text-foreground transition-colors">About</a>
+                    <a href="#experience" class="text-sm text-muted hover:text-foreground transition-colors">Experience</a>
+                    <a href="#publications" class="text-sm text-muted hover:text-foreground transition-colors">Publications</a>
+                    <a href="#education" class="text-sm text-muted hover:text-foreground transition-colors">Education</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="experience" class="page-content">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-body">
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Incoming Research Intern - BioNLP Lab</h3>
-                        <span class="entry-date">September 2026</span>
-                    </div>
-                    <div class="entry-meta">University of Massachusetts Amherst</div>
-                    <p class="entry-description">Conducting research in biomedical natural language processing. Focusing on the architectural evaluation and deployment of language models within clinical contexts.</p>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Research Intern - eBrain Lab</h3>
-                        <span class="entry-date">February 2026 – Present</span>
-                    </div>
-                    <div class="entry-meta">New York University Abu Dhabi</div>
-                    <p class="entry-description">Collaborating with <a href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/muhammad-shafique.html" target="_blank" rel="noopener">Dr. Muhammad Shafique</a> and <a href="https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/cqts/researchers/nouhaila-innan.html" target="_blank" rel="noopener">Dr. Nouhaila Innan</a> on computational methodologies for medical image processing. Engineering hybrid-operator synthesis pipelines to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications" class="page-content">
-            <h2 class="section-title">Publications</h2>
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="publication">Publications</button>
-                <button class="filter-btn" data-filter="preprint">Preprints</button>
-                <button class="filter-btn" data-filter="book">Books</button>
-            </div>
-            
-            <div id="empty-state" style="display: none;">Currently nothing, check back later.</div>
-
-            <div class="section-body">
-                <div class="year-section">
-                    <div class="year-marker">2026</div>
-                    <div class="year-content">
-                        
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors"><strong>Banerjee, A.</strong>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
-                            <h3 class="entry-title-heading">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
-                            <p class="venue"><em>IEEE EMBS International Conference on Biomedical and Health Informatics (BHI 2026)</em></p>
-                        </div>
-
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors">Raichura, P.* &amp; <strong>Banerjee, A.*</strong></p>
-                            <h3 class="entry-title-heading">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
-                            <p class="venue"><em>AIMS Workshop, COLM 2026</em></p>
-                            <div class="pub-buttons">
-                                <a href="https://arxiv.org/abs/2608.13598" target="_blank" rel="noopener" class="pub-btn">Paper</a>
-                                <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="pub-btn">Code</a>
-                            </div>
-                        </div>
-
-                        <div class="entry publication-entry" data-category="preprint">
-                            <p class="authors"><strong>Banerjee, A.</strong></p>
-                            <h3 class="entry-title-heading">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h3>
-                            <p class="venue"><em>arXiv Preprint - <strong>cs.MA</strong>/cs.AI</em></p>
-                            <div class="pub-buttons">
-                                <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="pub-btn">Paper</a>
-                                <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="pub-btn">Code</a>
-                            </div>
-                        </div>
-
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors"><strong>Banerjee, A.</strong> &amp; Joneja, B.</p>
-                            <h3 class="entry-title-heading">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h3>
-                            <p class="venue"><em>The Convergence Journal</em></p>
-                            <div class="pub-buttons">
-                                <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="pub-btn">Paper</a>
-                                <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="pub-btn">Code</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="year-section">
-                    <div class="year-marker">2025</div>
-                    <div class="year-content">
-                        <div class="entry publication-entry" data-category="publication">
-                            <p class="authors"><strong>Banerjee, A.*</strong> &amp; Roplekar, S.*</p>
-                            <h3 class="entry-title-heading">Python-Driven CT Scan Image Refinement</h3>
-                            <p class="venue"><em>Researchory</em></p>
-                            <div class="pub-buttons">
-                                <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="pub-btn">Paper</a>
-                                <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="pub-btn">Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="year-section">
-                    <div class="year-marker">2020</div>
-                    <div class="year-content">
-                        <div class="entry publication-entry" data-category="book">
-                            <p class="authors"><strong>Banerjee, A.</strong></p>
-                            <h3 class="entry-title-heading">Introduction to Python Programming</h3>
-                            <div class="pub-buttons">
-                                <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="pub-btn">Project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="page-content">
-            <h2 class="section-title">Education</h2>
-            <div class="section-body">
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>University of Massachusetts Amherst</h3>
-                        <span class="entry-date">September 2026 – May 2030</span>
-                    </div>
-                    <div class="entry-meta">BSc. in Computer Science (Manning College of Information and Computer Sciences)</div>
-                </div>
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Cambridge International School, Dubai</h3>
-                        <span class="entry-date">August 2011 – June 2026</span>
-                    </div>
-                    <div class="entry-meta">High School Diploma</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="awards" class="page-content">
-            <h2 class="section-title">Awards</h2>
-            <div class="section-body">
-                <div class="year-section">
-                    <div class="year-marker">2025</div>
-                    <div class="year-content">
-                        <div class="entry">
-                            <h3 class="entry-title-heading">Second Place, 15th Annual RIT Dubai Software Engineering Competition</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-24 space-y-32">
         
-        <footer class="footer">
-            <p>&copy; 2026 Amritesh Banerjee. All rights reserved.</p>
+        <!-- About Section -->
+        <section id="about" class="flex flex-col md:flex-row gap-12 items-start pt-16 observe-fade">
+            <div class="w-full md:w-2/5 flex-shrink-0">
+                <div class="relative aspect-[3/4] w-full overflow-hidden bg-neutral-900 shadow-2xl">
+                    <img src="A5_08940.jpg" alt="Amritesh Banerjee" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-out">
+                </div>
+            </div>
+            <div class="w-full md:w-3/5 flex flex-col justify-start">
+                <h1 class="text-5xl md:text-6xl font-extralight tracking-tight mb-4">Amritesh Banerjee</h1>
+                <p class="text-xl md:text-2xl text-muted font-light mb-8">Undergraduate AI Researcher</p>
+                <div class="space-y-6 text-muted font-light leading-relaxed text-lg">
+                    <p>I am an incoming undergraduate researcher at the <span class="text-foreground font-normal">Manning College of Information and Computer Sciences</span>, University of Massachusetts Amherst.</p>
+                    <p>My research focuses on <span class="text-foreground font-normal">AI evaluation</span>, collaborative language models, <span class="text-foreground font-normal">biomedical AI</span>, and graph machine learning. I develop benchmarks, evaluation frameworks, and scalable machine learning systems for trustworthy artificial intelligence.</p>
+                </div>
+                
+                <div class="flex flex-wrap items-center gap-6 mt-10">
+                    <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="text-muted hover:text-foreground transition-transform hover:-translate-y-1">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" class="text-muted hover:text-foreground transition-transform hover:-translate-y-1">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" class="text-muted hover:text-foreground transition-transform hover:-translate-y-1">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <code class="font-mono bg-neutral-900 text-neutral-300 px-3 py-1.5 rounded text-sm tracking-tight border border-neutral-800 select-all ml-auto">amriteshbane [at] umass [dot] edu</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="pt-12 border-t border-border observe-fade">
+            <h2 class="text-3xl font-light tracking-tight mb-12">Experience</h2>
+            <div class="space-y-12">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">Sep 2026</span>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-medium leading-tight">Incoming Research Intern - BioNLP Lab</h3>
+                        <p class="text-foreground">University of Massachusetts Amherst</p>
+                        <p class="text-muted font-light leading-relaxed">Conducting research in biomedical natural language processing. Focusing on the architectural evaluation and deployment of language models within clinical contexts.</p>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">Feb 2026 &mdash; Present</span>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-medium leading-tight">Research Intern - eBrain Lab</h3>
+                        <p class="text-foreground">New York University Abu Dhabi</p>
+                        <p class="text-muted font-light leading-relaxed">Collaborating with <a href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/muhammad-shafique.html" target="_blank" rel="noopener" class="underline decoration-neutral-700 hover:decoration-neutral-300 hover:text-foreground transition-colors">Dr. Muhammad Shafique</a> and <a href="https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/cqts/researchers/nouhaila-innan.html" target="_blank" rel="noopener" class="underline decoration-neutral-700 hover:decoration-neutral-300 hover:text-foreground transition-colors">Dr. Nouhaila Innan</a> on computational methodologies for medical image processing. Engineering hybrid-operator synthesis pipelines to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="pt-12 border-t border-border observe-fade">
+            <h2 class="text-3xl font-light tracking-tight mb-12">Selected Publications</h2>
+            <div class="space-y-8">
+                
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
+                        <h3 class="text-lg font-medium leading-tight">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
+                        <p class="text-muted font-light italic">Accepted at IEEE EMBS International Conference on Biomedical and Health Informatics (BHI 2026)</p>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm">Raichura, P.* &amp; <span class="text-foreground">Banerjee, A.*</span></p>
+                        <h3 class="text-lg font-medium leading-tight">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
+                        <p class="text-muted font-light italic">Accepted at AIMS Workshop, COLM 2026</p>
+                        <div class="pt-2">
+                            <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span></p>
+                        <h3 class="text-lg font-medium leading-tight">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h3>
+                        <p class="text-muted font-light italic">arXiv Preprint - <strong class="font-medium text-foreground">cs.MA</strong>/cs.AI</p>
+                        <div class="pt-2 flex gap-3">
+                            <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span> &amp; Joneja, B.</p>
+                        <h3 class="text-lg font-medium leading-tight">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h3>
+                        <p class="text-muted font-light italic">The Convergence Journal</p>
+                        <div class="pt-2 flex gap-3">
+                            <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2025</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
+                        <h3 class="text-lg font-medium leading-tight">Python-Driven CT Scan Image Refinement</h3>
+                        <p class="text-muted font-light italic">Researchory</p>
+                        <div class="pt-2 flex gap-3">
+                            <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2020</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span></p>
+                        <h3 class="text-lg font-medium leading-tight">Introduction to Python Programming</h3>
+                        <p class="text-muted font-light italic">Book</p>
+                        <div class="pt-2">
+                            <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Project</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Awards Section -->
+        <section id="education" class="pt-12 border-t border-border observe-fade">
+            <h2 class="text-3xl font-light tracking-tight mb-12">Education &amp; Awards</h2>
+            <div class="space-y-12">
+                
+                <div class="space-y-6">
+                    <h3 class="text-xl font-normal tracking-tight text-muted">Academic Path</h3>
+                    <div class="space-y-4">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <span class="text-foreground text-lg">BSc. in Computer Science, University of Massachusetts Amherst</span>
+                            <span class="text-sm font-mono text-muted">Sep 2026 &mdash; May 2030</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <span class="text-foreground text-lg">High School Diploma, Cambridge International School, Dubai</span>
+                            <span class="text-sm font-mono text-muted">Aug 2011 &mdash; Jun 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-normal tracking-tight text-muted">Honors</h3>
+                    <div class="space-y-4">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <span class="text-foreground text-lg">Second Place, 15th Annual RIT Dubai Software Engineering Competition</span>
+                            <span class="text-sm font-mono text-muted">2025</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-12 border-t border-border flex justify-between items-center text-sm text-muted observe-fade">
+            <p>&copy; 2026 Amritesh Banerjee</p>
+            <div class="flex gap-6">
+                <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" class="hover:text-foreground transition-colors">Google Scholar</a>
+                <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="hover:text-foreground transition-colors">GitHub</a>
+            </div>
         </footer>
+
     </main>
 
+    <!-- Interactive Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
