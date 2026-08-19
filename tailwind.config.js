@@ -7,10 +7,11 @@ tailwind.config = {
                 mono: ['Courier New', 'Courier', 'monospace'],
             },
             colors: {
-                background: '#0a0a0a',
-                foreground: '#ededed',
-                muted: '#a3a3a3',
-                border: '#262626',
+                background: 'var(--bg-color)',
+                foreground: 'var(--fg-color)',
+                muted: 'var(--muted-color)',
+                border: 'var(--border-color)',
+                card: 'var(--card-bg)'
             }
         }
     }
