@@ -96,10 +96,10 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform hover:rotate-12"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
                                 </a>
                             </div>
+                            <p class="text-lg text-muted font-light mb-2">A foundational guide to computational thinking</p>
                             <p class="text-muted text-sm font-mono">2020</p>
                         </div>
-                        <p class="text-muted font-light leading-relaxed mb-6">Python is a relatively easy language to learn when compared to other languages like Java, C++, or Swift. Also, it is widely used in games such as World of Tanks, EVE Online and Sims 4. Python is an extremely easy language to learn because of its simple syntax and its purposes. Purposes? Yes, purposes... Python can be used for machine learning and data science to basic features of websites.This book consists of 11 chapters, starting from the basics for beginners, it gradually scales up to intermediate level. After completing all the chapters, readers are highly recommended to take up the final exam. Additionally, there are 3 practical projects that will help users of this books to apply the concepts that they have learnt in the book. Going through the contents of this books will be like learning to play the guitar. Your first chords will be the expressions, variables and statements, and playing songs on the guitar will be like applying all that you learnt. So what I want you to do once you finish this book is to write a program that can help people and you can do this by doing the projects I have given at the end of the book. Before you start learning, I want to tell you something that my instructor told me when I started learning Python, he said that 'learning Python is like climbing the stairs, one mistake in your program and you will have to start all over again!', although this is not completely true, this is what you should be careful about, if you make one mistake... just one, the code won't run properly. So once again, welcome to the wonderful world of Python.
-</p>
+                        <p class="text-muted font-light leading-relaxed mb-6">A comprehensive introduction to Python designed to bridge the gap between basic syntax and applied computational problem-solving. Structured to facilitate immediate practical application for new learners.</p>
                         
                         <button id="praise-toggle" class="text-sm text-muted hover:text-foreground transition-colors self-start border-b border-border hover:border-muted focus:outline-none pb-1">Show Praise</button>
                         
@@ -142,19 +142,34 @@
         </section>
 
         <section id="publications" class="pt-12 border-t border-border observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Selected Publications</h2>
-            <div class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-12 gap-6">
+                <h2 class="text-3xl font-light tracking-tight text-foreground">Selected Publications</h2>
                 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
+                <div class="flex gap-4">
+                    <button class="pub-filter-btn text-sm font-medium border-b border-foreground text-foreground pb-1 focus:outline-none transition-colors" data-filter="all">All</button>
+                    <button class="pub-filter-btn text-sm font-medium border-b border-transparent text-muted hover:text-foreground pb-1 focus:outline-none transition-colors" data-filter="published">Published</button>
+                    <button class="pub-filter-btn text-sm font-medium border-b border-transparent text-muted hover:text-foreground pb-1 focus:outline-none transition-colors" data-filter="preprint">Preprints</button>
+                </div>
+            </div>
+
+            <div class="space-y-8" id="publications-container">
+                
+                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
                         <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
                         <h3 class="text-lg font-medium leading-tight text-foreground">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
                         <p class="text-muted font-light italic">Accepted at IEEE EMBS International Conference on Biomedical and Health Informatics (BHI 2026)</p>
+                        <div class="pt-2 flex gap-3">
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
+                            This paper introduces VoxelSynth3D, a novel hybrid-operator synthesis pipeline designed to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans. Accompanying the pipeline is the Synthetic CLINIC Benchmark, engineered to evaluate image-domain artifact reduction models with rigorous clinical fidelity.
+                        </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
+                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
                         <p class="text-muted text-sm">Raichura, P.* &amp; <span class="text-foreground transition-colors">Banerjee, A.*</span></p>
@@ -163,11 +178,15 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://arxiv.org/abs/2608.13598" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
+                            Agent evaluation relies almost entirely on outcome metrics such as success rate, which capture whether an agent succeeds but not how consistently it behaves. We argue that behavioral consistency across tasks is a distinct and measurable property, and we introduce the Behavioral Consistency Metric (BCM) to quantify it. BCM trains a model to predict task success from behavioral features of agent execution traces, derives a per-trajectory feature-attribution vector, and measures the mean pairwise similarity of these vectors within an agent system. Across roughly 9,000 trajectories from six language model agents on software engineering tasks, our central finding is that cross-task and within-task consistency are distinct axes that can diverge: some systems are locally reproducible, behaving similarly on repeated attempts at one task, yet globally fragmented, with no stable strategy across different tasks, while others are consistent at both scales. Prior work measures only same-task reproducibility and so cannot observe this separation. We further find that consistency is not reducible to success rate, since systems with comparable success can differ sharply in consistency, and that the frontier-versus-open-source consistency gap persists under a within-task control that holds task difficulty constant. We position BCM as a process-level reliability signal that complements outcome metrics, and we are explicit about the conditions under which it is meaningful.
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
+                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="preprint">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
                         <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span></p>
@@ -176,11 +195,15 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
+                            The integration of iterative LLMs within multi-agent diagnostic frameworks requires a rigorous quantitative reevaluation of underlying communication topologies. Frequently used architectural paradigms depend on scale-free or small-world networks, assuming optimal communication efficiency. Our study mathematically dismantles that assumption for semantic data. By mapping multi-agent communication uncertainty trajectories onto a 768-dimensional Bio_ClinicalBERT embedding space via an analytical isotropic variance proxy using Barabási&ndash;Albert (BA) and Watts&ndash;Strogatz (WS) networks, we prove that structural bottlenecks compromise diagnostic safety. Our phase transition matrices illustrate that localized dense cliques confine hallucinated data, preventing global consensus and forcing the system toward a permanent entropy saturation threshold of H<sub>&infin;</sub> &approx; 5.947. As a result, we measure a severe terminal cosine similarity degradation of 53.29%, completely overwriting the original ground-truth. Moreover, the terminal semantic drift reveals a catastrophic variance amplification of 51.81% (&rho; = 1.5181) in highly clustered architectures, proving total system unpredictability when compared to Erdős&ndash;Rényi configurations (&rho; = 1.0766). Instead of reducing errors, hub-centric systems autonomously compound localized hallucinations. By introducing dynamic spectral monitoring operating at an O(N<sup>3</sup>) time complexity and imposing a strict lower bound on algebraic connectivity (&lambda;<sub>2 min</sub>) via the continuous eigen-decomposition of the graph Laplacian, we present a mathematically rigorous technique to ensure global state diffusion. Securing the reliability of autonomous medical diagnostics necessitates treating topological stability as a non-negotiable quantitative imperative.
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
+                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
                         <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span> &amp; Joneja, B.</p>
@@ -189,11 +212,15 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
+                            This research investigates the evolution of U.S. political rhetoric over the past eighty years, focusing on how thematic priorities and emotional framing have influenced partisan discourse. The study applies computational methods, including semantic similarity and sentiment analysis, to presidential nomination speeches from 1944 to 2024, with the aim of understanding patterns of ideological alignment, divergence, and rhetorical strategy. Beyond identifying these patterns in party messaging, the research examines how differences in thematic emphasis and emotional tone shape voter perception, engagement and political polarization. By combining quantitative linguistic analysis with historical and political context, the study provides insight into the mechanisms through which political language both mirrors and reinforces broader social and ideological divisions in the United States.
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
+                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2025</span>
                     <div class="space-y-2">
                         <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
@@ -202,6 +229,10 @@
                         <div class="pt-2 flex gap-3">
                             <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
                             <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">ABS</button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
+                            This study investigates the application of Artificial Intelligence (AI) in Computed Topography (CT) scans to enhance the image quality; this paper will also address the limitations in traditional methods and human interpretation. Utilizing Python, this research uses common AI-driven reconstruction techniques to reduce noise and remove artifacts from image scans. The methodology’s primary focus is to develop algorithms that leverage machine learning to identify and evaluate image patterns and optimize the reconstruction parameters. The results indicate that AI-powered reconstruction techniques significantly boost the image quality, yielding sharper images and a considerable reduction in noise and artifacts when compared with conventional methods. This facilitates improved pattern recognition and could aid in the detection of subtle features. This study highlights the potential of Python-based AI solutions to overcome current obstacles in image refinement and offers a promising avenue for more reliable computer-aided diagnostics.
                         </div>
                     </div>
                 </div>
