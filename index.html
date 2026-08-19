@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amritesh Banerjee | AI Researcher</title>
     
+    <!-- Theme FOUC Prevention Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +26,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
 </head>
-<body class="antialiased selection:bg-neutral-800 selection:text-neutral-100 min-h-screen">
+<body class="antialiased selection:bg-muted selection:text-background min-h-screen">
     
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-border">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a class="text-lg font-medium tracking-tight hover:text-muted transition-colors" href="#">Amritesh Banerjee</a>
+                <a class="text-lg font-medium tracking-tight hover:text-muted transition-colors text-foreground" href="#">Amritesh Banerjee</a>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#about" class="text-sm text-muted hover:text-foreground transition-colors">About</a>
                     <a href="#experience" class="text-sm text-muted hover:text-foreground transition-colors">Experience</a>
                     <a href="#publications" class="text-sm text-muted hover:text-foreground transition-colors">Publications</a>
                     <a href="#education" class="text-sm text-muted hover:text-foreground transition-colors">Education</a>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="text-muted hover:text-foreground transition-colors ml-4 focus:outline-none" aria-label="Toggle Dark Mode">
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-4.22 4.22a1 1 0 011.415 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm4.22-4.22a1 1 0 010 1.415L7.512 8.62a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -39,16 +54,16 @@
         <!-- About Section -->
         <section id="about" class="flex flex-col md:flex-row gap-12 items-start pt-16 observe-fade">
             <div class="w-full md:w-2/5 flex-shrink-0">
-                <div class="relative aspect-[3/4] w-full overflow-hidden bg-neutral-900 shadow-2xl">
+                <div class="relative aspect-[3/4] w-full overflow-hidden bg-card shadow-2xl transition-colors duration-300">
                     <img src="A5_08940.JPG" alt="Amritesh Banerjee" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-out">
                 </div>
             </div>
             <div class="w-full md:w-3/5 flex flex-col justify-start">
-                <h1 class="text-5xl md:text-6xl font-extralight tracking-tight mb-4">Amritesh Banerjee</h1>
+                <h1 class="text-5xl md:text-6xl font-extralight tracking-tight mb-4 text-foreground">Amritesh Banerjee</h1>
                 <p class="text-xl md:text-2xl text-muted font-light mb-8">Undergraduate AI Researcher</p>
                 <div class="space-y-6 text-muted font-light leading-relaxed text-lg">
-                    <p>I am an incoming undergraduate researcher at the <span class="text-foreground font-normal">Manning College of Information and Computer Sciences</span>, University of Massachusetts Amherst.</p>
-                    <p>My research focuses on <span class="text-foreground font-normal">AI evaluation</span>, collaborative language models, <span class="text-foreground font-normal">biomedical AI</span>, and graph machine learning. I develop benchmarks, evaluation frameworks, and scalable machine learning systems for trustworthy artificial intelligence.</p>
+                    <p>I am an incoming undergraduate researcher at the <span class="text-foreground font-normal transition-colors">Manning College of Information and Computer Sciences</span>, University of Massachusetts Amherst.</p>
+                    <p>My research focuses on <span class="text-foreground font-normal transition-colors">AI evaluation</span>, collaborative language models, <span class="text-foreground font-normal transition-colors">biomedical AI</span>, and graph machine learning. I develop benchmarks, evaluation frameworks, and scalable machine learning systems for trustworthy artificial intelligence.</p>
                 </div>
                 
                 <div class="flex flex-wrap items-center gap-6 mt-10">
@@ -61,19 +76,19 @@
                     <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" class="text-muted hover:text-foreground transition-transform hover:-translate-y-1">
                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    <code class="font-mono bg-neutral-900 text-neutral-300 px-3 py-1.5 rounded text-sm tracking-tight border border-neutral-800 select-all ml-auto">amriteshbane [at] umass [dot] edu</code>
+                    <code class="font-mono bg-card text-foreground px-3 py-1.5 rounded text-sm tracking-tight border border-border select-all ml-auto transition-colors duration-300">amriteshbane [at] umass [dot] edu</code>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="pt-12 border-t border-border observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12">Experience</h2>
+            <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Experience</h2>
             <div class="space-y-12">
                 <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">Sep 2026</span>
                     <div class="space-y-2">
-                        <h3 class="text-xl font-medium leading-tight">Incoming Research Intern - BioNLP Lab</h3>
+                        <h3 class="text-xl font-medium leading-tight text-foreground">Incoming Research Intern - BioNLP Lab</h3>
                         <p class="text-foreground">University of Massachusetts Amherst</p>
                         <p class="text-muted font-light leading-relaxed">Conducting research in biomedical natural language processing. Focusing on the architectural evaluation and deployment of language models within clinical contexts.</p>
                     </div>
@@ -82,9 +97,9 @@
                 <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">Feb 2026 &mdash; Present</span>
                     <div class="space-y-2">
-                        <h3 class="text-xl font-medium leading-tight">Research Intern - eBrain Lab</h3>
+                        <h3 class="text-xl font-medium leading-tight text-foreground">Research Intern - eBrain Lab</h3>
                         <p class="text-foreground">New York University Abu Dhabi</p>
-                        <p class="text-muted font-light leading-relaxed">Collaborating with <a href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/muhammad-shafique.html" target="_blank" rel="noopener" class="underline decoration-neutral-700 hover:decoration-neutral-300 hover:text-foreground transition-colors">Dr. Muhammad Shafique</a> and <a href="https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/cqts/researchers/nouhaila-innan.html" target="_blank" rel="noopener" class="underline decoration-neutral-700 hover:decoration-neutral-300 hover:text-foreground transition-colors">Dr. Nouhaila Innan</a> on computational methodologies for medical image processing. Engineering hybrid-operator synthesis pipelines to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans.</p>
+                        <p class="text-muted font-light leading-relaxed">Collaborating with <a href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/muhammad-shafique.html" target="_blank" rel="noopener" class="underline decoration-muted hover:text-foreground transition-colors">Dr. Muhammad Shafique</a> and <a href="https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/cqts/researchers/nouhaila-innan.html" target="_blank" rel="noopener" class="underline decoration-muted hover:text-foreground transition-colors">Dr. Nouhaila Innan</a> on computational methodologies for medical image processing. Engineering hybrid-operator synthesis pipelines to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans.</p>
                     </div>
                 </div>
             </div>
@@ -92,77 +107,78 @@
 
         <!-- Publications Section -->
         <section id="publications" class="pt-12 border-t border-border observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12">Selected Publications</h2>
+            <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Selected Publications</h2>
             <div class="space-y-8">
                 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
-                        <h3 class="text-lg font-medium leading-tight">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
                         <p class="text-muted font-light italic">Accepted at IEEE EMBS International Conference on Biomedical and Health Informatics (BHI 2026)</p>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm">Raichura, P.* &amp; <span class="text-foreground">Banerjee, A.*</span></p>
-                        <h3 class="text-lg font-medium leading-tight">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
+                        <p class="text-muted text-sm">Raichura, P.* &amp; <span class="text-foreground transition-colors">Banerjee, A.*</span></p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
                         <p class="text-muted font-light italic">Accepted at AIMS Workshop, COLM 2026</p>
-                        <div class="pt-2">
-                            <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                        <div class="pt-2 flex gap-3">
+                            <a href="https://arxiv.org/abs/2608.13598" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span></p>
-                        <h3 class="text-lg font-medium leading-tight">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h3>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span></p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h3>
                         <p class="text-muted font-light italic">arXiv Preprint - <strong class="font-medium text-foreground">cs.MA</strong>/cs.AI</p>
                         <div class="pt-2 flex gap-3">
-                            <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Paper</a>
-                            <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span> &amp; Joneja, B.</p>
-                        <h3 class="text-lg font-medium leading-tight">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h3>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span> &amp; Joneja, B.</p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h3>
                         <p class="text-muted font-light italic">The Convergence Journal</p>
                         <div class="pt-2 flex gap-3">
-                            <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Paper</a>
-                            <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2025</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
-                        <h3 class="text-lg font-medium leading-tight">Python-Driven CT Scan Image Refinement</h3>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">Python-Driven CT Scan Image Refinement</h3>
                         <p class="text-muted font-light italic">Researchory</p>
                         <div class="pt-2 flex gap-3">
-                            <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Paper</a>
-                            <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-neutral-900/50 p-4 -mx-4 rounded-lg transition-colors">
+                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2020</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground">Banerjee, A.</span></p>
-                        <h3 class="text-lg font-medium leading-tight">Introduction to Python Programming</h3>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span></p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">Introduction to Python Programming</h3>
                         <p class="text-muted font-light italic">Book</p>
                         <div class="pt-2">
-                            <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-neutral-400 hover:text-foreground transition-colors rounded text-muted">Project</a>
+                            <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Project</a>
                         </div>
                     </div>
                 </div>
@@ -172,18 +188,18 @@
 
         <!-- Education & Awards Section -->
         <section id="education" class="pt-12 border-t border-border observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12">Education &amp; Awards</h2>
+            <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Education &amp; Awards</h2>
             <div class="space-y-12">
                 
                 <div class="space-y-6">
                     <h3 class="text-xl font-normal tracking-tight text-muted">Academic Path</h3>
                     <div class="space-y-4">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-                            <span class="text-foreground text-lg">BSc., University of Massachusetts Amherst</span>
+                            <span class="text-foreground text-lg transition-colors">BSc., University of Massachusetts Amherst</span>
                             <span class="text-sm font-mono text-muted">Sep 2026 &mdash; May 2030</span>
                         </div>
                         <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-                            <span class="text-foreground text-lg">High School, Cambridge International School, Dubai</span>
+                            <span class="text-foreground text-lg transition-colors">High School, Cambridge International School, Dubai</span>
                             <span class="text-sm font-mono text-muted">Aug 2011 &mdash; Jun 2026</span>
                         </div>
                     </div>
@@ -193,11 +209,11 @@
                     <h3 class="text-xl font-normal tracking-tight text-muted">Honors</h3>
                     <div class="space-y-4">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-                            <span class="text-foreground text-lg">Chancellor's Award, University of Massachusetts Amherst - $16,000</span>
+                            <span class="text-foreground text-lg transition-colors">Chancellor's Award, University of Massachusetts Amherst - $16,000</span>
                             <span class="text-sm font-mono text-muted">2026</span>
                         </div>
                         <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-                            <span class="text-foreground text-lg">Second Place, 15th Annual RIT Dubai Software Engineering Competition - AED 20,000</span>
+                            <span class="text-foreground text-lg transition-colors">Second Place, 15th Annual RIT Dubai Software Engineering Competition - AED 20,000</span>
                             <span class="text-sm font-mono text-muted">2025</span>
                         </div>
                     </div>
