@@ -1,31 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
 
-    themeToggleBtn.addEventListener('click', function() {
-        // Check and apply local storage settings
-        if (localStorage.getItem('theme')) {
-            if (localStorage.getItem('theme') === 'light') {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+            if (localStorage.getItem('theme')) {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                }
             } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
             }
-        // If local storage is empty, fallback to document class parsing
-        } else {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-    });
+        });
+    }
 
-    // Smooth scrolling for navigation anchors
+    const praiseToggleBtn = document.getElementById('praise-toggle');
+    const praiseContent = document.getElementById('praise-content');
+
+    if (praiseToggleBtn && praiseContent) {
+        praiseToggleBtn.addEventListener('click', () => {
+            praiseContent.classList.toggle('hidden');
+            if (praiseContent.classList.contains('hidden')) {
+                praiseToggleBtn.textContent = 'Show Praise';
+            } else {
+                praiseToggleBtn.textContent = 'Hide Praise';
+            }
+        });
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -41,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Intersection Observer for elegant scroll reveal animations
     const observerOptions = {
         root: null,
         rootMargin: '0px 0px -50px 0px',
@@ -52,13 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
-                // Unobserve once revealed to maintain state
                 observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
 
-    // Attach observer to all target sections
     document.querySelectorAll('.observe-fade').forEach((element) => {
         observer.observe(element);
     });
