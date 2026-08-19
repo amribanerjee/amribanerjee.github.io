@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amritesh Banerjee | AI Researcher</title>
     
-    <!-- Theme FOUC Prevention Script -->
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -14,40 +13,33 @@
         }
     </script>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
 </head>
 <body class="antialiased selection:bg-muted selection:text-background min-h-screen">
     
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a class="text-lg font-medium tracking-tight hover:text-muted transition-colors text-foreground" href="#">Amritesh Banerjee</a>
                 
                 <div class="flex items-center gap-4 md:gap-8">
-                    <!-- Desktop Links -->
                     <div class="hidden md:flex items-center gap-8">
                         <a href="#about" class="text-sm text-muted hover:text-foreground transition-colors">About</a>
+                        <a href="#books" class="text-sm text-muted hover:text-foreground transition-colors">Books</a>
                         <a href="#experience" class="text-sm text-muted hover:text-foreground transition-colors">Experience</a>
                         <a href="#publications" class="text-sm text-muted hover:text-foreground transition-colors">Publications</a>
                         <a href="#education" class="text-sm text-muted hover:text-foreground transition-colors">Education</a>
                     </div>
                     
-                    <!-- Theme Toggle (Always Visible) -->
                     <button id="theme-toggle" class="text-muted hover:text-foreground transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
-                        <!-- Sun Icon (Hidden in Light Mode, Block in Dark Mode) -->
                         <svg id="theme-toggle-light-icon" class="hidden dark:block w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-4.22 4.22a1 1 0 011.415 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm4.22-4.22a1 1 0 010 1.415L7.512 8.62a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z"/></svg>
-                        <!-- Moon Icon (Block in Light Mode, Hidden in Dark Mode) -->
                         <svg id="theme-toggle-dark-icon" class="block dark:hidden w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
                     </button>
                 </div>
@@ -57,7 +49,6 @@
 
     <main class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-24 space-y-32">
         
-        <!-- About Section -->
         <section id="about" class="flex flex-col md:flex-row gap-12 items-start pt-16 observe-fade">
             <div class="w-full md:w-2/5 flex-shrink-0">
                 <div class="relative aspect-[3/4] w-full overflow-hidden bg-card shadow-2xl transition-colors duration-300">
@@ -90,7 +81,43 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <section id="books" class="pt-12 border-t border-border observe-fade">
+            <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Books</h2>
+            <div class="space-y-16">
+                <article class="grid md:grid-cols-[240px_1fr] gap-8 lg:gap-12 items-start">
+                    <div class="relative aspect-[2/3] w-full overflow-hidden bg-card shadow-2xl transition-colors duration-300">
+                        <img src="617YFTjVOQL.jpg" alt="Introduction to Python Programming" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-out">
+                    </div>
+                    <div class="flex flex-col justify-start">
+                        <div class="mb-6">
+                            <div class="flex items-start justify-between gap-4 mb-1">
+                                <h3 class="text-2xl md:text-3xl font-medium leading-tight text-foreground">Introduction to Python Programming</h3>
+                                <a href="https://www.amazon.com/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-muted hover:text-foreground transition-colors mt-1" title="Amazon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform hover:rotate-12"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                </a>
+                            </div>
+                            <p class="text-lg text-muted font-light mb-2">A foundational guide to computational thinking</p>
+                            <p class="text-muted text-sm font-mono">2020</p>
+                        </div>
+                        <p class="text-muted font-light leading-relaxed mb-6">A comprehensive introduction to Python designed to bridge the gap between basic syntax and applied computational problem-solving. Structured to facilitate immediate practical application for new learners.</p>
+                        
+                        <button id="praise-toggle" class="text-sm text-muted hover:text-foreground transition-colors self-start border-b border-border hover:border-muted focus:outline-none pb-1">Show Praise</button>
+                        
+                        <div id="praise-content" class="hidden mt-8 space-y-6">
+                            <blockquote class="border-l-2 border-border pl-4 text-muted font-light italic">
+                                "Introduction to Python is an essential compendium for any new learner. Written in a simple and effective manner with very clear examples, this book serves as a good stepping-stone for anyone aspiring to quickly develop expertise in Python. Amritesh with his lucid writing style has made an impressive feat to reach out to new learners."
+                                <footer class="mt-2 text-sm not-italic font-medium text-foreground">&mdash; Dr. Dhrupad Mathur, SP Jain School of Global Management, Dubai, UAE</footer>
+                            </blockquote>
+                            <blockquote class="border-l-2 border-border pl-4 text-muted font-light italic">
+                                "Introduction to Python Programming is a perfect book for beginners with step by step understanding of the core concepts of the subject. The simple but practical examples enable learners to learn, use and apply the concepts in real time practice. Overall, a wonderful starting point for all school goers out to make big in the world of coding."
+                                <footer class="mt-2 text-sm not-italic font-medium text-foreground">&mdash; Dr. Ved Prakash Mishra, Amity University, Dubai, UAE</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section id="experience" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Experience</h2>
             <div class="space-y-12">
@@ -114,7 +141,6 @@
             </div>
         </section>
 
-        <!-- Publications Section -->
         <section id="publications" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Selected Publications</h2>
             <div class="space-y-8">
@@ -180,22 +206,9 @@
                     </div>
                 </div>
 
-                <div class="group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300">
-                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2020</span>
-                    <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span></p>
-                        <h3 class="text-lg font-medium leading-tight text-foreground">Introduction to Python Programming</h3>
-                        <p class="text-muted font-light italic">Book</p>
-                        <div class="pt-2">
-                            <a href="https://www.amazon.ae/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Project</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- Education & Awards Section -->
         <section id="education" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Education &amp; Awards</h2>
             <div class="space-y-12">
@@ -231,7 +244,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="pt-12 border-t border-border flex justify-between items-center text-sm text-muted observe-fade">
             <p>&copy; 2026 Amritesh Banerjee</p>
             <div class="flex gap-6">
@@ -242,7 +254,6 @@
 
     </main>
 
-    <!-- Interactive Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
