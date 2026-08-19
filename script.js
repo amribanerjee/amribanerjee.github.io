@@ -71,15 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Abstract Toggle Logic
+    // Abstract Toggle Logic (Robust structural targeting)
     const absBtns = document.querySelectorAll('.abs-btn');
     
     if (absBtns.length > 0) {
         absBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Find the nearest abstract content container
-                const abstractContent = btn.parentElement.nextElementSibling;
-                if (abstractContent && abstractContent.classList.contains('abstract-content')) {
+                // Ascend to the parent container that holds both the button group and the abstract
+                const cardContainer = btn.closest('.space-y-2');
+                if (!cardContainer) return;
+
+                // Find the abstract content safely within this specific card
+                const abstractContent = cardContainer.querySelector('.abstract-content');
+                if (abstractContent) {
                     abstractContent.classList.toggle('hidden');
                     
                     // Toggle active button styles
