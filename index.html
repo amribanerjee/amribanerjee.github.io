@@ -154,22 +154,7 @@
 
             <div class="space-y-8" id="publications-container">
                 
-                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="preprint">
-                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
-                    <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground transition-colors font-bold">Banerjee, A.</span> &amp; Singh, Z.</p>
-                        <h3 class="text-lg font-medium leading-tight text-foreground">Topology Demands Scale: Small Language Models Fail to Preserve Clinical Evidence Graphs</h3>
-                        <p class="text-muted font-light italic">arXiv Preprint - <strong class="font-medium text-foreground">cs.CL</strong>/cs.AI</p>
-                        <div class="pt-2 flex gap-3">
-                            <a href="https://zenodo.org/records/22040140" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
-                            <a href="#" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
-                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
-                        </div>
-                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
-                            Zero-shot clinical information extraction in radiology demands absolute structural fidelity to downstream workflows, yet standard token-level metrics remain dangerously blind to relational hallucinations. In this work, we present a rigorous mathematical evaluation framework applying Gromov-Wasserstein Optimal Transport, Spectral Graph Theory, and Conformal Prediction to quantify latent structural collapse in edge-deployed Small Language Models (SLMs). Evaluating a diverse suite of sub-4B parameter models on SNOMED CT extraction from 1,000 complex CT reports, we uncover a profound topological phase transition. While models exceeding 3 billion parameters (such as Phi-3-mini and StableLM-Zephyr-3B) maintain structural parity with deterministic pipelines (GW &approx; 0.01), the 1.5B architecture suffers from catastrophic topological collapse, exhibiting a 99.6% zero-connectivity rate (&lambda;<sub>2</sub> = 0) under spectral decomposition and rendering conformal safety calibration impossible (&tau; = 1.0). Furthermore, bivariate coupling analysis demonstrates that semantic drift and topological collapse are monotonically locked (&rho; &approx; 0.99) in sub-2B models, while orthogonal hallucination penalties prove that this failure is strictly relational rather than lexical. Our findings establish that edge-deployed clinical SLMs require a strict parameter capacity floor between 1.5B and 3.0B to preserve latent evidence graph coherence.
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
