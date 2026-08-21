@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amritesh Banerjee | AI Researcher</title>
     
-    <!-- Theme FOUC Prevention Script -->
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -14,28 +13,23 @@
         }
     </script>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
 </head>
 <body class="antialiased selection:bg-muted selection:text-background min-h-screen">
     
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a class="text-lg font-medium tracking-tight hover:text-muted transition-colors text-foreground" href="#">Amritesh Banerjee</a>
                 
                 <div class="flex items-center gap-4 md:gap-8">
-                    <!-- Desktop Links -->
                     <div class="hidden md:flex items-center gap-8">
                         <a href="#about" class="text-sm text-muted hover:text-foreground transition-colors">About</a>
                         <a href="#books" class="text-sm text-muted hover:text-foreground transition-colors">Books</a>
@@ -44,11 +38,8 @@
                         <a href="#education" class="text-sm text-muted hover:text-foreground transition-colors">Education</a>
                     </div>
                     
-                    <!-- Theme Toggle (Always Visible) -->
                     <button id="theme-toggle" class="text-muted hover:text-foreground transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
-                        <!-- Sun Icon (Hidden in Light Mode, Block in Dark Mode) -->
                         <svg id="theme-toggle-light-icon" class="hidden dark:block w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-4.22 4.22a1 1 0 011.415 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm4.22-4.22a1 1 0 010 1.415L7.512 8.62a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z"/></svg>
-                        <!-- Moon Icon (Block in Light Mode, Hidden in Dark Mode) -->
                         <svg id="theme-toggle-dark-icon" class="block dark:hidden w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
                     </button>
                 </div>
@@ -58,7 +49,6 @@
 
     <main class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-24 space-y-32">
         
-        <!-- About Section -->
         <section id="about" class="flex flex-col md:flex-row gap-12 items-start pt-16 observe-fade">
             <div class="w-full md:w-2/5 flex-shrink-0">
                 <div class="relative aspect-[3/4] w-full overflow-hidden bg-card shadow-2xl transition-colors duration-300">
@@ -91,7 +81,6 @@
             </div>
         </section>
 
-        <!-- Books Section -->
         <section id="books" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Books</h2>
             <div class="space-y-16">
@@ -107,9 +96,10 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform hover:rotate-12"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
                                 </a>
                             </div>
+                            <p class="text-lg text-muted font-light mb-2">A foundational guide to computational thinking</p>
                             <p class="text-muted text-sm font-mono">2020</p>
                         </div>
-                        <p class="text-muted font-light leading-relaxed mb-6">Python is a relatively easy language to learn when compared to other languages like Java, C++, or Swift. Also, it is widely used in games such as World of Tanks, EVE Online and Sims 4. Python is an extremely easy language to learn because of its simple syntax and its purposes. Purposes? Yes, purposes… Python can be used for machine learning and data science to basic features of websites.This book consists of 11 chapters, starting from the basics for beginners, it gradually scales up to intermediate level. After completing all the chapters, readers are highly recommended to take up the final exam. Additionally, there are 3 practical projects that will help users of this books to apply the concepts that they have learnt in the book. Going through the contents of this books will be like learning to play the guitar. Your first chords will be the expressions, variables and statements, and playing songs on the guitar will be like applying all that you learnt. So what I want you to do once you finish this book is to write a program that can help people and you can do this by doing the projects I have given at the end of the book. Before you start learning, I want to tell you something that my instructor told me when I started learning Python, he said that ‘learning Python is like climbing the stairs, one mistake in your program and you will have to start all over again!’, although this is not completely true, this is what you should be careful about, if you make one mistake… just one, the code won’t run properly. So once again, welcome to the wonderful world of Python.</p>
+                        <p class="text-muted font-light leading-relaxed mb-6">A comprehensive introduction to Python designed to bridge the gap between basic syntax and applied computational problem-solving. Structured to facilitate immediate practical application for new learners.</p>
                         
                         <button id="praise-toggle" class="text-sm text-muted hover:text-foreground transition-colors self-start border-b border-border hover:border-muted focus:outline-none pb-1">Show Praise</button>
                         
@@ -128,7 +118,6 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Experience</h2>
             <div class="space-y-12">
@@ -152,12 +141,10 @@
             </div>
         </section>
 
-        <!-- Publications Section -->
         <section id="publications" class="pt-12 border-t border-border observe-fade">
             <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-12 gap-6">
                 <h2 class="text-3xl font-light tracking-tight text-foreground">Selected Publications</h2>
                 
-                <!-- Filter Controls -->
                 <div class="flex gap-4">
                     <button class="pub-filter-btn text-sm font-medium border-b border-foreground text-foreground pb-1 focus:outline-none transition-colors" data-filter="all">All</button>
                     <button class="pub-filter-btn text-sm font-medium border-b border-transparent text-muted hover:text-foreground pb-1 focus:outline-none transition-colors" data-filter="published">Published</button>
@@ -167,11 +154,27 @@
 
             <div class="space-y-8" id="publications-container">
                 
-                <!-- Pub Card -->
+                <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="preprint">
+                    <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
+                    <div class="space-y-2">
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors font-bold">Banerjee, A.</span> &amp; Singh, Z.</p>
+                        <h3 class="text-lg font-medium leading-tight text-foreground">Topology Demands Scale: Small Language Models Fail to Preserve Clinical Evidence Graphs</h3>
+                        <p class="text-muted font-light italic">arXiv Preprint - <strong class="font-medium text-foreground">cs.CL</strong>/cs.AI</p>
+                        <div class="pt-2 flex gap-3">
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Paper</a>
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted">Code</a>
+                            <button class="abs-btn text-xs font-mono px-3 py-1 border border-border hover:border-muted hover:text-foreground transition-colors rounded text-muted focus:outline-none">Abstract</button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 text-sm text-muted font-light leading-relaxed border-l-2 border-border pl-4">
+                            Zero-shot clinical information extraction in radiology demands absolute structural fidelity to downstream workflows, yet standard token-level metrics remain dangerously blind to relational hallucinations. In this work, we present a rigorous mathematical evaluation framework applying Gromov-Wasserstein Optimal Transport, Spectral Graph Theory, and Conformal Prediction to quantify latent structural collapse in edge-deployed Small Language Models (SLMs). Evaluating a diverse suite of sub-4B parameter models on SNOMED CT extraction from 1,000 complex CT reports, we uncover a profound topological phase transition. While models exceeding 3 billion parameters (such as Phi-3-mini and StableLM-Zephyr-3B) maintain structural parity with deterministic pipelines (GW &approx; 0.01), the 1.5B architecture suffers from catastrophic topological collapse, exhibiting a 99.6% zero-connectivity rate (&lambda;<sub>2</sub> = 0) under spectral decomposition and rendering conformal safety calibration impossible (&tau; = 1.0). Furthermore, bivariate coupling analysis demonstrates that semantic drift and topological collapse are monotonically locked (&rho; &approx; 0.99) in sub-2B models, while orthogonal hallucination penalties prove that this failure is strictly relational rather than lexical. Our findings establish that edge-deployed clinical SLMs require a strict parameter capacity floor between 1.5B and 3.0B to preserve latent evidence graph coherence.
+                        </div>
+                    </div>
+                </div>
+
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors font-bold">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
                         <h3 class="text-lg font-medium leading-tight text-foreground">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
                         <p class="text-muted font-light italic">Accepted at IEEE EMBS International Conference on Biomedical and Health Informatics (BHI 2026)</p>
                         <div class="pt-2 flex gap-3">
@@ -183,11 +186,10 @@
                     </div>
                 </div>
 
-                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm">Raichura, P.* &amp; <span class="text-foreground transition-colors">Banerjee, A.*</span></p>
+                        <p class="text-muted text-sm">Raichura, P.* &amp; <span class="text-foreground transition-colors font-bold">Banerjee, A.*</span></p>
                         <h3 class="text-lg font-medium leading-tight text-foreground">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
                         <p class="text-muted font-light italic">Accepted at AIMS Workshop, COLM 2026</p>
                         <div class="pt-2 flex gap-3">
@@ -201,11 +203,10 @@
                     </div>
                 </div>
 
-                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="preprint">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span></p>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors font-bold">Banerjee, A.</span></p>
                         <h3 class="text-lg font-medium leading-tight text-foreground">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h3>
                         <p class="text-muted font-light italic">arXiv Preprint - <strong class="font-medium text-foreground">cs.MA</strong>/cs.AI</p>
                         <div class="pt-2 flex gap-3">
@@ -219,11 +220,10 @@
                     </div>
                 </div>
 
-                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2026</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.</span> &amp; Joneja, B.</p>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors font-bold">Banerjee, A.</span> &amp; Joneja, B.</p>
                         <h3 class="text-lg font-medium leading-tight text-foreground">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h3>
                         <p class="text-muted font-light italic">The Convergence Journal</p>
                         <div class="pt-2 flex gap-3">
@@ -237,11 +237,10 @@
                     </div>
                 </div>
 
-                <!-- Pub Card -->
                 <div class="pub-card group grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start hover:bg-card p-4 -mx-4 rounded-lg transition-colors duration-300" data-category="published">
                     <span class="text-sm font-mono text-muted group-hover:text-foreground transition-colors pt-1">2025</span>
                     <div class="space-y-2">
-                        <p class="text-muted text-sm"><span class="text-foreground transition-colors">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
+                        <p class="text-muted text-sm"><span class="text-foreground transition-colors font-bold">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
                         <h3 class="text-lg font-medium leading-tight text-foreground">Python-Driven CT Scan Image Refinement</h3>
                         <p class="text-muted font-light italic">Researchory</p>
                         <div class="pt-2 flex gap-3">
@@ -258,7 +257,6 @@
             </div>
         </section>
 
-        <!-- Education & Awards Section -->
         <section id="education" class="pt-12 border-t border-border observe-fade">
             <h2 class="text-3xl font-light tracking-tight mb-12 text-foreground">Education &amp; Awards</h2>
             <div class="space-y-12">
@@ -294,7 +292,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="pt-12 border-t border-border flex justify-between items-center text-sm text-muted observe-fade">
             <p>&copy; 2026 Amritesh Banerjee</p>
             <div class="flex gap-6">
