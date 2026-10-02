@@ -1,33 +1,12 @@
-/* Color Palette Variables */
-:root {
-    --bg-color: #fafafa;
-    --fg-color: #0a0a0a;
-    --muted-color: #525252;
-    --border-color: #e5e5e5;
-    --card-bg: rgba(0, 0, 0, 0.05);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.dark {
-    --bg-color: #0a0a0a;
-    --fg-color: #ededed;
-    --muted-color: #a3a3a3;
-    --border-color: #262626;
-    --card-bg: rgba(255, 255, 255, 0.05);
-}
-
-/* Base Resets */
-body {
-    background-color: var(--bg-color);
-    color: var(--fg-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Scroll Fade Animation Configuration */
+/* Scroll Reveal Animation */
 .observe-fade {
     opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .observe-fade.in-view {
