@@ -3,204 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amritesh Banerjee | AI Researcher</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>Amritesh Banerjee | Researcher</title>
     <link rel="stylesheet" href="style.css">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
 </head>
-<body class="antialiased bg-slate-50 text-slate-800 selection:bg-blue-900 selection:text-white min-h-screen">
-    
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a class="text-lg font-semibold tracking-tight text-blue-900 hover:text-blue-700 transition-colors" href="#">Amritesh Banerjee</a>
-                
-                <div class="flex items-center gap-4 md:gap-8">
-                    <div class="hidden md:flex items-center gap-8">
-                        <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">About</a>
-                        <a href="#books" class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Books</a>
-                        <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Experience</a>
-                        <a href="#publications" class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Publications</a>
-                        <a href="#service" class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Service</a>
-                        <a href="#education" class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Education</a>
-                    </div>
-                </div>
-            </div>
+<body class="bg-ivory text-charcoal antialiased min-h-screen font-sans selection:bg-ash selection:text-ivory">
+
+    <!-- Minimal Header -->
+    <header class="max-w-4xl mx-auto px-6 pt-32 pb-16">
+        <h1 class="font-serif text-5xl md:text-6xl font-medium tracking-tight text-charcoal mb-4">Amritesh Banerjee</h1>
+        <p class="font-sans text-xl text-ash font-light mb-8 max-w-2xl leading-relaxed">
+            Undergraduate AI Researcher at the Manning College of Information and Computer Sciences, University of Massachusetts Amherst.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm font-mono text-ash uppercase tracking-widest">
+            <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" class="hover:text-charcoal transition-colors border-b border-transparent hover:border-charcoal pb-1">Scholar</a>
+            <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="hover:text-charcoal transition-colors border-b border-transparent hover:border-charcoal pb-1">GitHub</a>
+            <a href="https://arxiv.org/search/cs?searchtype=author&query=Banerjee,+Amritesh" target="_blank" rel="noopener" class="hover:text-charcoal transition-colors border-b border-transparent hover:border-charcoal pb-1">arXiv</a>
+            <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" class="hover:text-charcoal transition-colors border-b border-transparent hover:border-charcoal pb-1">LinkedIn</a>
+            <span class="text-charcoal ml-auto bg-[#f2f0e6] px-3 py-1 rounded-sm select-all lowercase tracking-normal">amriteshbane [at] umass [dot] edu</span>
         </div>
-    </nav>
+    </header>
 
-    <main class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-24 space-y-32">
-        
-        <section id="about" class="flex flex-col md:flex-row gap-12 items-start pt-16 observe-fade">
-            <div class="w-full md:w-2/5 flex-shrink-0">
-                <div class="relative aspect-[3/4] w-full overflow-hidden bg-white shadow-lg rounded-sm border border-slate-200">
-                    <img src="A5_08940.JPG" alt="Amritesh Banerjee" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-out">
-                </div>
-            </div>
-            <div class="w-full md:w-3/5 flex flex-col justify-start">
-                <h1 class="text-5xl md:text-6xl font-light tracking-tight mb-4 text-blue-900">Amritesh Banerjee</h1>
-                <p class="text-xl md:text-2xl text-slate-600 font-medium mb-8">Undergraduate AI Researcher</p>
-                <div class="space-y-6 text-slate-600 font-normal leading-relaxed text-lg">
-                    <p>I am an incoming undergraduate researcher at the <span class="text-slate-900 font-semibold">Manning College of Information and Computer Sciences</span>, University of Massachusetts Amherst.</p>
-                    <p>My research focuses on <span class="text-slate-900 font-semibold">AI evaluation</span>, collaborative language models, <span class="text-slate-900 font-semibold">biomedical AI</span>, and graph machine learning. I develop benchmarks, evaluation frameworks, and scalable machine learning systems for trustworthy artificial intelligence.</p>
-                </div>
-                
-                <div class="flex flex-wrap items-center gap-6 mt-10 text-slate-500">
-                    <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="hover:text-blue-900 transition-transform hover:-translate-y-1" title="GitHub">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" class="hover:text-blue-900 transition-transform hover:-translate-y-1" title="Google Scholar">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-                    </a>
-                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Banerjee,+Amritesh" target="_blank" rel="noopener" class="hover:text-blue-900 transition-transform hover:-translate-y-1" title="arXiv Author Profile">
-                        <div class="w-6 h-6 bg-current" style="mask: url('arxiv-logomark.svg') no-repeat center / contain; -webkit-mask: url('arxiv-logomark.svg') no-repeat center / contain;"></div>
-                    </a>
-                    <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" class="hover:text-blue-900 transition-transform hover:-translate-y-1" title="LinkedIn">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <code class="font-mono bg-white text-slate-800 px-3 py-1.5 rounded-md shadow-sm border border-slate-200 select-all ml-auto text-sm">amriteshbane [at] umass [dot] edu</code>
+    <main class="max-w-4xl mx-auto px-6 pb-32 space-y-32">
+
+        <!-- Research Profile -->
+        <section class="observe-fade border-t border-[#e5e3db] pt-16">
+            <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <h2 class="font-serif text-xl italic text-ash mt-1">Profile</h2>
+                <div class="font-sans text-lg text-charcoal font-light leading-relaxed max-w-2xl space-y-6">
+                    <p>My research investigates the structural integrity of autonomous systems. I focus on <span class="font-medium">AI evaluation</span>, collaborative language models, clinical graph machine learning, and biomedical image refinement.</p>
+                    <p>I build evaluation frameworks and scalable machine learning architectures to quantify and guarantee the reliability of edge-deployed models in high-stakes environments.</p>
                 </div>
             </div>
         </section>
 
-        <section id="books" class="pt-12 border-t border-slate-200 observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12 text-blue-900">Books</h2>
-            <div class="space-y-16">
-                <article class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 grid md:grid-cols-[200px_1fr] gap-8 items-start">
-                    <div class="relative aspect-[2/3] w-full overflow-hidden bg-slate-100 rounded border border-slate-200">
-                        <img src="617YFTjVOQL.jpg" alt="Introduction to Python Programming" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-out">
-                    </div>
-                    <div class="flex flex-col justify-start">
-                        <div class="mb-4">
-                            <span class="text-sm font-mono text-blue-900 font-semibold tracking-wide uppercase">2020</span>
+        <!-- Publications grouped by year -->
+        <section class="observe-fade border-t border-[#e5e3db] pt-16">
+            <div class="flex items-baseline justify-between mb-16">
+                <h2 class="font-serif text-3xl text-charcoal">Publications & Preprints</h2>
+                <span class="font-mono text-xs text-ash">* Equal contribution &nbsp;|&nbsp; &dagger; Corresponding author</span>
+            </div>
+
+            <!-- 2026 Group -->
+            <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start mb-16">
+                <h3 class="font-serif text-2xl italic text-ash">2026</h3>
+                
+                <div class="space-y-12">
+                    
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">Invocation-Level Reliability of Tool-Using Agents</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3">Noorain, A.*, Mohanty, S.*, <span class="font-medium">Banerjee, A.</span>, &amp; Dasgupta, A.<sup>&dagger;</sup></p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">arXiv Preprint &mdash; cs.AI / cs.CL</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="https://arxiv.org/abs/2608.26189" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <a href="https://github.com/amribanerjee/Tool-use-Reliability" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">CODE</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
                         </div>
-                        <div class="mb-6">
-                            <div class="flex items-start justify-between gap-4 mb-2">
-                                <h3 class="text-2xl font-semibold leading-tight text-slate-900">Introduction to Python Programming</h3>
-                                <a href="https://www.amazon.com/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-slate-400 hover:text-blue-900 transition-colors mt-1" title="Amazon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform hover:rotate-12"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                </a>
-                            </div>
-                            <p class="text-lg text-slate-600 font-medium">A foundational guide to computational thinking</p>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            Tool-using agents fail two ways: choosing the wrong tool, or forming wrong arguments, and an early failure of either kind can silently corrupt everything downstream. We measure a correct-invocation rate that separates the two, under both a clean teacher-forced context and the model's own free-running context, on five open-weight models over contamination-free multi-step tasks (depths 1-8). By depth 6, roughly 70% of a model's own clean-context capability is lost to its own earlier mistakes (L6 = 0.686, 0.684). Our central finding concerns the measurement itself. Under exact-match scoring against a fixed gold trajectory, a propagation model's severity and recovery parameters are not merely hard to estimate - they are fixed by the scoring rule. Severity is forced to its boundary (0 of 869 poisoned steps correct); recovery is structurally unobservable. We give the mechanism and a remedy, conditional-on-state scoring, applied retrospectively to cached completions at zero additional cost.
                         </div>
-                        <p class="text-slate-600 font-normal leading-relaxed mb-6">A comprehensive introduction to Python designed to bridge the gap between basic syntax and applied computational problem-solving. Structured to facilitate immediate practical application for new learners.</p>
+                    </article>
+
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">Topology Demands Scale: Small Language Models Fail to Preserve Clinical Evidence Graphs</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3"><span class="font-medium">Banerjee, A.</span> &amp; Singh, Z.</p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">arXiv Preprint &mdash; cs.CL / cs.AI</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="#" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <a href="#" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">CODE</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
+                        </div>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            Zero-shot clinical information extraction in radiology demands absolute structural fidelity to downstream workflows, yet standard token-level metrics remain dangerously blind to relational hallucinations. In this work, we present a rigorous mathematical evaluation framework applying Gromov-Wasserstein Optimal Transport, Spectral Graph Theory, and Conformal Prediction to quantify latent structural collapse in edge-deployed Small Language Models (SLMs). Evaluating a diverse suite of sub-4B parameter models on SNOMED CT extraction from 1,000 complex CT reports, we uncover a profound topological phase transition.
+                        </div>
+                    </article>
+
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3"><span class="font-medium">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">IEEE BHI 2026</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="https://arxiv.org/abs/2610.01512" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
+                        </div>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            Metal artifacts in postoperative musculoskeletal CT can obscure bone–implant and adjacent soft-tissue interfaces. We present VoxelSynth3D, a training-free 3D image-domain MAR framework for reconstructed CT. The method localizes correction to an implant-adaptive artifact support and uses inspectable support masks, normalized tissue priors, deviation-gated blending weights, and restricted edge-guided refinement to suppress artifacts while limiting changes to unaffected anatomy. We also construct a paired synthetic CLINIC-Metal benchmark from nometal CTPelvic1K pelvic CT volumes. On 40 synthetic test cases, VoxelSynth3D achieved lower artifact ROI RMSE than the main comparators.
+                        </div>
+                    </article>
+
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3">Raichura, P.* &amp; <span class="font-medium">Banerjee, A.*</span></p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">AIMS Workshop, COLM 2026 &nbsp;|&nbsp; IEEE MIT URTC 2026</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="https://arxiv.org/abs/2608.13598" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">CODE</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
+                        </div>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            We argue that behavioral consistency across tasks is a distinct and measurable property, and we introduce the Behavioral Consistency Metric (BCM) to quantify it. BCM trains a model to predict task success from behavioral features of agent execution traces, derives a per-trajectory feature-attribution vector, and measures the mean pairwise similarity of these vectors within an agent system. Across roughly 9,000 trajectories from six language model agents on software engineering tasks, our central finding is that cross-task and within-task consistency are distinct axes that can diverge.
+                        </div>
+                    </article>
+
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3"><span class="font-medium">Banerjee, A.</span></p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">arXiv Preprint &mdash; cs.MA / cs.AI</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">CODE</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
+                        </div>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            The integration of iterative LLMs within multi-agent diagnostic frameworks requires a rigorous quantitative reevaluation of underlying communication topologies. By mapping multi-agent communication uncertainty trajectories onto a 768-dimensional Bio_ClinicalBERT embedding space via an analytical isotropic variance proxy, we prove that structural bottlenecks compromise diagnostic safety. Our phase transition matrices illustrate that localized dense cliques confine hallucinated data, preventing global consensus and forcing the system toward a permanent entropy saturation threshold.
+                        </div>
+                    </article>
+
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3"><span class="font-medium">Banerjee, A.</span> &amp; Joneja, B.</p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">The Convergence Journal</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">CODE</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
+                        </div>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            This research investigates the evolution of U.S. political rhetoric over the past eighty years, focusing on how thematic priorities and emotional framing have influenced partisan discourse. The study applies computational methods, including semantic similarity and sentiment analysis, to presidential nomination speeches from 1944 to 2024, with the aim of understanding patterns of ideological alignment, divergence, and rhetorical strategy.
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- 2025 Group -->
+            <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start mb-16">
+                <h3 class="font-serif text-2xl italic text-ash">2025</h3>
+                <div class="space-y-12">
+                    
+                    <!-- Paper -->
+                    <article class="group">
+                        <h4 class="font-serif text-xl font-medium text-charcoal leading-snug mb-2">Python-Driven CT Scan Image Refinement</h4>
+                        <p class="font-sans text-sm text-charcoal mb-3"><span class="font-medium">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
+                        <p class="font-mono text-xs text-ash tracking-widest uppercase mb-4">Researchory</p>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider">
+                            <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">PAPER</a>
+                            <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">CODE</a>
+                            <button class="abs-btn text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">ABSTRACT</button>
+                        </div>
+                        <div class="abstract-content hidden mt-6 font-sans text-sm font-light text-ash leading-relaxed pl-4 border-l border-[#e5e3db] max-w-2xl">
+                            This study investigates the application of Artificial Intelligence (AI) in Computed Topography (CT) scans to enhance the image quality; this paper will also address the limitations in traditional methods and human interpretation. Utilizing Python, this research uses common AI-driven reconstruction techniques to reduce noise and remove artifacts from image scans. 
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Books -->
+        <section class="observe-fade border-t border-[#e5e3db] pt-16">
+            <h2 class="font-serif text-3xl text-charcoal mb-16">Books</h2>
+            
+            <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start mb-16">
+                <h3 class="font-serif text-2xl italic text-ash">2020</h3>
+                <div class="grid md:grid-cols-[160px_1fr] gap-8 items-start">
+                    <img src="617YFTjVOQL.jpg" alt="Introduction to Python Programming" class="w-full object-cover shadow-sm border border-[#e5e3db] sepia-[.2] hover:sepia-0 transition-all duration-500">
+                    <div>
+                        <h4 class="font-serif text-2xl font-medium text-charcoal leading-snug mb-2">Introduction to Python Programming</h4>
+                        <p class="font-sans text-sm text-charcoal mb-4">A foundational guide to computational thinking</p>
                         
-                        <button id="praise-toggle" class="text-sm font-semibold text-blue-900 hover:text-blue-700 transition-colors self-start border-b border-blue-900 hover:border-blue-700 focus:outline-none pb-1">Show Praise</button>
-                        
-                        <div id="praise-content" class="hidden mt-6 space-y-6 bg-slate-50 p-6 rounded border border-slate-200">
-                            <blockquote class="border-l-4 border-blue-900 pl-4 text-slate-700 font-light italic">
-                                "Introduction to Python is an essential compendium for any new learner. Written in a simple and effective manner with very clear examples, this book serves as a good stepping-stone for anyone aspiring to quickly develop expertise in Python. Amritesh with his lucid writing style has made an impressive feat to reach out to new learners."
-                                <footer class="mt-3 text-sm not-italic font-semibold text-slate-900">&mdash; Dr. Dhrupad Mathur, SP Jain School of Global Management, Dubai, UAE</footer>
+                        <div class="flex gap-4 font-mono text-xs tracking-wider mb-6">
+                            <a href="https://www.amazon.com/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4">AMAZON</a>
+                            <button id="praise-toggle" class="text-charcoal hover:text-rust transition-colors underline decoration-[#e5e3db] underline-offset-4 cursor-pointer focus:outline-none">REVIEWS</button>
+                        </div>
+
+                        <div id="praise-content" class="hidden font-sans text-sm font-light text-ash space-y-6 max-w-2xl pl-4 border-l border-[#e5e3db]">
+                            <blockquote class="italic">
+                                "Written in a simple and effective manner with very clear examples, this book serves as a good stepping-stone for anyone aspiring to quickly develop expertise in Python."
+                                <footer class="mt-2 text-xs not-italic font-medium text-charcoal">&mdash; Dr. Dhrupad Mathur, SP Jain School of Global Management</footer>
                             </blockquote>
-                            <blockquote class="border-l-4 border-blue-900 pl-4 text-slate-700 font-light italic">
-                                "Introduction to Python Programming is a perfect book for beginners with step by step understanding of the core concepts of the subject. The simple but practical examples enable learners to learn, use and apply the concepts in real time practice. Overall, a wonderful starting point for all school goers out to make big in the world of coding."
-                                <footer class="mt-3 text-sm not-italic font-semibold text-slate-900">&mdash; Dr. Ved Prakash Mishra, Amity University, Dubai, UAE</footer>
+                            <blockquote class="italic">
+                                "A perfect book for beginners with step by step understanding of the core concepts. A wonderful starting point for all school goers out to make big in the world of coding."
+                                <footer class="mt-2 text-xs not-italic font-medium text-charcoal">&mdash; Dr. Ved Prakash Mishra, Amity University</footer>
                             </blockquote>
                         </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
 
-        <section id="experience" class="pt-12 border-t border-slate-200 observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12 text-blue-900">Experience</h2>
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
-                    <span class="text-sm font-mono text-blue-900 font-semibold uppercase tracking-wide">Sep 2026</span>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-semibold leading-tight text-slate-900">Incoming Research Intern - BioNLP Lab</h3>
-                        <p class="text-slate-600 font-medium">University of Massachusetts Amherst</p>
-                        <p class="text-slate-600 font-normal leading-relaxed mt-2">Conducting research in biomedical natural language processing. Focusing on the architectural evaluation and deployment of language models within clinical contexts.</p>
+        <!-- Experience & Service -->
+        <section class="observe-fade border-t border-[#e5e3db] pt-16">
+            <h2 class="font-serif text-3xl text-charcoal mb-16">Experience &amp; Service</h2>
+            
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                    <span class="font-mono text-xs text-ash tracking-widest uppercase mt-1">2026 &mdash;</span>
+                    <div>
+                        <h3 class="font-serif text-xl font-medium text-charcoal">Incoming Research Intern, BioNLP Lab</h3>
+                        <p class="font-sans text-sm text-ash mb-3">University of Massachusetts Amherst</p>
+                        <p class="font-sans text-sm font-light text-charcoal max-w-2xl leading-relaxed">Architectural evaluation and deployment of language models within clinical contexts.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
-                    <span class="text-sm font-mono text-blue-900 font-semibold uppercase tracking-wide">Feb 2026 &mdash; Present</span>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-semibold leading-tight text-slate-900">Research Intern - eBrain Lab</h3>
-                        <p class="text-slate-600 font-medium">New York University Abu Dhabi</p>
-                        <p class="text-slate-600 font-normal leading-relaxed mt-2">Collaborating with <a href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/muhammad-shafique.html" target="_blank" rel="noopener" class="text-blue-900 font-medium hover:underline transition-colors">Dr. Muhammad Shafique</a> and <a href="https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/cqts/researchers/nouhaila-innan.html" target="_blank" rel="noopener" class="text-blue-900 font-medium hover:underline transition-colors">Dr. Nouhaila Innan</a> on computational methodologies for medical image processing. Engineering hybrid-operator synthesis pipelines to algorithmically mitigate metal artifacts in three-dimensional Computed Tomography (CT) scans.</p>
+                <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                    <span class="font-mono text-xs text-ash tracking-widest uppercase mt-1">2026 &mdash;</span>
+                    <div>
+                        <h3 class="font-serif text-xl font-medium text-charcoal">Research Intern, eBrain Lab</h3>
+                        <p class="font-sans text-sm text-ash mb-3">New York University Abu Dhabi</p>
+                        <p class="font-sans text-sm font-light text-charcoal max-w-2xl leading-relaxed">Collaborating with Dr. Muhammad Shafique and Dr. Nouhaila Innan. Engineering hybrid-operator synthesis pipelines to algorithmically mitigate metal artifacts in 3D CT scans.</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                    <span class="font-mono text-xs text-ash tracking-widest uppercase mt-1">2026</span>
+                    <div>
+                        <h3 class="font-serif text-xl font-medium text-charcoal">Program Committee / Reviewer</h3>
+                        <p class="font-sans text-sm text-ash mb-3">NeurIPS Workshop on Verify Agents</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="publications" class="pt-12 border-t border-slate-200 observe-fade">
-            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-8 gap-6">
-                <div>
-                    <h2 class="text-3xl font-light tracking-tight text-blue-900 mb-2">Selected Publications</h2>
-                    <p class="text-xs text-slate-500 font-mono">* Equal contribution &nbsp;|&nbsp; &dagger; Corresponding author</p>
-                </div>
-                
-                <div class="flex bg-white rounded-md p-1 border border-slate-200 shadow-sm">
-                    <button class="pub-filter-btn px-4 py-1.5 text-sm font-semibold rounded bg-slate-100 text-blue-900 transition-colors focus:outline-none" data-filter="all">All</button>
-                    <button class="pub-filter-btn px-4 py-1.5 text-sm font-medium rounded text-slate-500 hover:text-blue-900 transition-colors focus:outline-none" data-filter="published">Published</button>
-                    <button class="pub-filter-btn px-4 py-1.5 text-sm font-medium rounded text-slate-500 hover:text-blue-900 transition-colors focus:outline-none" data-filter="preprint">Preprints</button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8" id="publications-container">
-                <!-- Data loaded dynamically via JS -->
-            </div>
-        </section>
-
-        <section id="service" class="pt-12 border-t border-slate-200 observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12 text-blue-900">Academic Service</h2>
-            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 grid md:grid-cols-[1fr_3fr] gap-4 md:gap-8 items-start">
-                <span class="text-sm font-mono text-blue-900 font-semibold uppercase tracking-wide">2026</span>
-                <div class="space-y-1">
-                    <h3 class="text-xl font-semibold leading-tight text-slate-900">Program Committee / Reviewer</h3>
-                    <p class="text-slate-600 font-medium">NeurIPS Workshop on Verify Agents</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="pt-12 border-t border-slate-200 observe-fade">
-            <h2 class="text-3xl font-light tracking-tight mb-12 text-blue-900">Education &amp; Awards</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 space-y-6">
-                    <h3 class="text-xl font-semibold tracking-tight text-slate-900 border-b border-slate-100 pb-4">Academic Path</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <p class="text-slate-900 font-medium text-lg">BSc., University of Massachusetts Amherst</p>
-                            <p class="text-sm font-mono text-slate-500 mt-1">Sep 2026 &mdash; May 2030</p>
-                        </div>
-                        <div>
-                            <p class="text-slate-900 font-medium text-lg">High School, Cambridge International School, Dubai</p>
-                            <p class="text-sm font-mono text-slate-500 mt-1">Aug 2011 &mdash; Jun 2026</p>
-                        </div>
+        <!-- Education -->
+        <section class="observe-fade border-t border-[#e5e3db] pt-16">
+            <h2 class="font-serif text-3xl text-charcoal mb-16">Education</h2>
+            
+            <div class="space-y-8">
+                <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                    <span class="font-mono text-xs text-ash tracking-widest uppercase mt-1">2026-2030</span>
+                    <div>
+                        <h3 class="font-serif text-xl font-medium text-charcoal">University of Massachusetts Amherst</h3>
+                        <p class="font-sans text-sm text-ash mb-1">BSc. Information and Computer Sciences</p>
+                        <p class="font-mono text-xs text-charcoal uppercase tracking-widest mt-2">Chancellor's Award ($16,000)</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 space-y-6">
-                    <h3 class="text-xl font-semibold tracking-tight text-slate-900 border-b border-slate-100 pb-4">Honors</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <p class="text-slate-900 font-medium text-lg">Chancellor's Award, UMass Amherst - $16,000</p>
-                            <p class="text-sm font-mono text-slate-500 mt-1">2026</p>
-                        </div>
-                        <div>
-                            <p class="text-slate-900 font-medium text-lg">Second Place, RIT Dubai Software Engineering Competition</p>
-                            <p class="text-sm font-mono text-slate-500 mt-1">2025</p>
-                        </div>
+                <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                    <span class="font-mono text-xs text-ash tracking-widest uppercase mt-1">2011-2026</span>
+                    <div>
+                        <h3 class="font-serif text-xl font-medium text-charcoal">Cambridge International School, Dubai</h3>
+                        <p class="font-sans text-sm text-ash mb-1">High School</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <footer class="pt-12 border-t border-slate-200 flex justify-between items-center text-sm text-slate-500 font-medium observe-fade">
+        <!-- Footer -->
+        <footer class="border-t border-[#e5e3db] pt-12 pb-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-ash uppercase tracking-widest">
             <p>&copy; 2026 Amritesh Banerjee</p>
             <div class="flex gap-6">
-                <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" class="hover:text-blue-900 transition-colors">Google Scholar</a>
-                <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="hover:text-blue-900 transition-colors">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" class="hover:text-charcoal transition-colors">Scholar</a>
+                <a href="https://github.com/amribanerjee/" class="hover:text-charcoal transition-colors">GitHub</a>
             </div>
         </footer>
 
