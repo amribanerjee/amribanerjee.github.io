@@ -1,206 +1,304 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <title>Amritesh Banerjee | UMass Amherst</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Amritesh Banerjee is an undergraduate AI researcher at the University of Massachusetts Amherst working on AI evaluation, collaborative language models, and biomedical AI.">
-    <meta name="keywords" content="AI evaluation, AI measurement, clinical language models, graph machine learning, biomedical AI">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amritesh Banerjee | AI Researcher</title>
     
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/favicon-dark.png" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/favicon.png" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
-
-    <!-- External Icon Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Neo-Brutalist Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/font.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
-</head>
-<body>
-    <div class="wrapper">
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0a192f',
+                        silver: '#64748b',
+                        line: '#e2e8f0',
+                        surface: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #ffffff; color: #0a192f; }
+        ::selection { background-color: #0a192f; color: #ffffff; }
         
-        <header>
-            <a class="image avatar"><img src="A5_08940.JPG" alt="Amritesh Banerjee avatar" /></a>
-            <h1>Amritesh Banerjee</h1>
-            <position style="font-size:1.10rem;">Undergraduate AI Researcher</position>
-            <br>
-            <autocolor>UMass Amherst</autocolor>
-            <br>
-            <email>amriteshbane [at] umass [dot] edu</email>
-            <br><br>
-            <div class="social-icons">
-                <a style="margin: 0 5px 0 0" href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en">
-                    <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-                </a>
-                <a style="margin: 0 5px 0 0" href="https://github.com/amribanerjee/">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a style="margin: 0 5px 0 0" href="https://linkedin.com/in/amri-banerjee">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a style="margin: 0 0 0 0" href="https://arxiv.org/search/cs?searchtype=author&query=Banerjee,+Amritesh">
-                    <i class="ai ai-arxiv" style="font-size:1.2rem"></i>
-                </a>
+        /* Instant Snap Abstracts */
+        .abstract-content { display: none; }
+        .abstract-content.open { display: block; }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <main class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+        
+        <!-- Header -->
+        <header class="mb-32">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Amritesh Banerjee</h1>
+            <p class="text-lg md:text-xl text-silver font-medium max-w-2xl leading-relaxed mb-8">
+                Undergraduate AI Researcher at the <span class="text-navy font-semibold">Manning College of Information and Computer Sciences</span>, University of Massachusetts Amherst.
+            </p>
+            
+            <div class="flex flex-wrap gap-3 text-sm font-semibold tracking-wide uppercase">
+                <a href="https://scholar.google.com/citations?user=f0xebVwAAAAJ&hl=en" target="_blank" rel="noopener" class="border border-line px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-none">Scholar</a>
+                <a href="https://github.com/amribanerjee/" target="_blank" rel="noopener" class="border border-line px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-none">GitHub</a>
+                <a href="https://arxiv.org/search/cs?searchtype=author&query=Banerjee,+Amritesh" target="_blank" rel="noopener" class="border border-line px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-none">arXiv</a>
+                <a href="https://linkedin.com/in/amri-banerjee" target="_blank" rel="noopener" class="border border-line px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-none">LinkedIn</a>
+                <span class="border border-line px-4 py-2 bg-surface select-all lowercase tracking-normal text-silver">amriteshbane [at] umass [dot] edu</span>
             </div>
-            <br>
         </header>
 
-        <section>
-            <h2 id="about-me">About Me</h2>
-            <p>I am an incoming undergraduate researcher at the Manning College of Information and Computer Sciences, University of Massachusetts Amherst. My research focuses on AI evaluation, collaborative language models, biomedical AI, and graph machine learning. I build evaluation frameworks and scalable machine learning architectures to quantify and guarantee the reliability of edge-deployed models in high-stakes environments.</p>
-            <p>Currently, I am a Research Intern at the BioNLP Lab (UMass Amherst) and the eBrain Lab (NYU Abu Dhabi), where I engineer hybrid-operator synthesis pipelines to algorithmically mitigate artifacts in 3D Computed Tomography scans.</p>
-
-            <h2 id="research-interests">Research Interests</h2>
-            <ul>
-                <li><strong>AI Evaluation & Reliability:</strong> Behavioral consistency, capability mapping, multi-agent frameworks</li>
-                <li><strong>Biomedical AI:</strong> Medical image processing, interpretable volume refinement, clinical LLMs</li>
-                <li><strong>Graph Machine Learning:</strong> Optimal transport, spectral graph theory, topological stability</li>
-            </ul>
-
-            <h2 id="news">News</h2>
-            <ul>
-                <li><strong>[Sep 2026]</strong> Serving as a Reviewer / Program Committee member for the NeurIPS Workshop on Verify Agents.</li>
-                <li><strong>[Sep 2026]</strong> Started as an incoming Research Intern at the BioNLP Lab, UMass Amherst.</li>
-                <li><strong>[Aug 2026]</strong> "VoxelSynth3D" accepted to IEEE BHI 2026.</li>
-                <li><strong>[Aug 2026]</strong> "Measuring Cross-Task Behavioral Consistency" accepted to AIMS Workshop at COLM 2026 and IEEE MIT URTC 2026.</li>
-                <li><strong>[Feb 2026]</strong> Started as a Research Intern at the eBrain Lab, NYU Abu Dhabi.</li>
-                <li><strong>[2026]</strong> Received the Chancellor's Award at UMass Amherst ($16,000).</li>
-            </ul>
-
-            <h2 id="publications" style="margin: 2px 0px -15px;">Publications & Preprints</h2>
-            <div class="publications">
-                <ol class="bibliography">
-
-                    <!-- Invocation Reliability -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr"></div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://arxiv.org/abs/2608.26189">Invocation-Level Reliability of Tool-Using Agents</a></div>
-                                <div class="author">Afiya Noorain<sup>*</sup>, Subhranshu Mohanty<sup>*</sup>, <strong>Amritesh Banerjee</strong>, Abhijit Dasgupta<sup>†</sup><br /><small><sup>*</sup> Equal Contribution<br /><sup>†</sup> Corresponding Author</small></div>
-                                <div class="periodical"><em>arXiv Preprint - cs.AI/cs.CL/cs.LG, 2026.</em></div>
-                                <div class="links">
-                                    <a href="https://arxiv.org/abs/2608.26189" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
-                                    <a href="https://github.com/amribanerjee/Tool-use-Reliability" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                    <!-- VoxelSynth3D -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr"></div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://arxiv.org/abs/2610.01512">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</a></div>
-                                <div class="author"><strong>Amritesh Banerjee</strong>, Abdul Basit, R. R. Joseph, Nouhaila Innan, Muhammad Shafique</div>
-                                <div class="periodical"><em>IEEE EMBS International Conference on Biomedical and Health Informatics <strong>(BHI)</strong>, 2026.</em></div>
-                                <div class="links">
-                                    <a href="https://arxiv.org/abs/2610.01512" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                    <!-- Behavioral Consistency -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr"></div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://arxiv.org/abs/2608.13598">Measuring Cross-Task Behavioral Consistency in Language Model Agents</a></div>
-                                <div class="author">Pranil Raichura<sup>*</sup>, <strong>Amritesh Banerjee<sup>*</sup></strong><br /><small><sup>*</sup> Equal Contribution</small></div>
-                                <div class="periodical"><em>AIMS Workshop, <strong>COLM</strong> 2026; IEEE MIT <strong>URTC</strong> 2026.</em></div>
-                                <div class="links">
-                                    <a href="https://arxiv.org/abs/2608.13598" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
-                                    <a href="https://github.com/amribanerjee/tbf-eval" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                    <!-- Spectral Dynamics -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr"></div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://arxiv.org/abs/2607.22758">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</a></div>
-                                <div class="author"><strong>Amritesh Banerjee</strong></div>
-                                <div class="periodical"><em>arXiv Preprint - cs.MA/cs.AI, 2026.</em></div>
-                                <div class="links">
-                                    <a href="https://arxiv.org/abs/2607.22758" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
-                                    <a href="https://github.com/amribanerjee/spectral-semantic-cascade" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                    <!-- Semantic Polarization -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr"></div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</a></div>
-                                <div class="author"><strong>Amritesh Banerjee</strong>, Bhuvi Joneja</div>
-                                <div class="periodical"><em>The Convergence Journal, 2026.</em></div>
-                                <div class="links">
-                                    <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
-                                    <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                    <!-- CT Scan -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr"></div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf">Python-Driven CT Scan Image Refinement</a></div>
-                                <div class="author"><strong>Amritesh Banerjee<sup>*</sup></strong>, Sudeep Roplekar<sup>*</sup><br /><small><sup>*</sup> Equal Contribution</small></div>
-                                <div class="periodical"><em>Researchory, 2025.</em></div>
-                                <div class="links">
-                                    <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
-                                    <a href="https://github.com/amribanerjee/Reconstruction-CT" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                    <!-- Book -->
-                    <li>
-                        <div class="pub-row">
-                            <div class="col-sm-3 abbr">
-                                <img src="617YFTjVOQL.jpg" class="teaser img-fluid z-depth-1" />
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="title"><a href="https://www.amazon.com/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ">Introduction to Python Programming</a></div>
-                                <div class="author"><strong>Amritesh Banerjee</strong></div>
-                                <div class="periodical"><em>Book, 2020.</em></div>
-                                <div class="links">
-                                    <a href="https://www.amazon.com/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" class="btn btn-sm z-depth-0" role="button" target="_blank">Amazon</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><br />
-
-                </ol>
+        <!-- Profile & News -->
+        <section class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 mb-24 border-t border-line pt-12">
+            <h2 class="text-sm font-bold text-silver uppercase tracking-widest mt-1">Profile & News</h2>
+            <div>
+                <p class="text-base text-navy leading-relaxed mb-10 max-w-3xl">
+                    My research investigates the structural integrity of autonomous systems. I focus on <span class="font-semibold">AI evaluation</span>, collaborative language models, clinical graph machine learning, and biomedical image refinement. I build scalable machine learning architectures to quantify and guarantee the reliability of edge-deployed models in high-stakes environments.
+                </p>
+                <ul class="space-y-3 text-sm text-silver">
+                    <li><strong class="text-navy font-semibold">[Sep 2026]</strong> Serving as a Reviewer for the NeurIPS Workshop on Verify Agents.</li>
+                    <li><strong class="text-navy font-semibold">[Sep 2026]</strong> Started as an incoming Research Intern at the BioNLP Lab, UMass Amherst.</li>
+                    <li><strong class="text-navy font-semibold">[Aug 2026]</strong> "VoxelSynth3D" accepted to IEEE BHI 2026.</li>
+                    <li><strong class="text-navy font-semibold">[Aug 2026]</strong> "Measuring Cross-Task Behavioral Consistency" accepted to AIMS Workshop at COLM 2026 and IEEE MIT URTC 2026.</li>
+                    <li><strong class="text-navy font-semibold">[Feb 2026]</strong> Started as a Research Intern at the eBrain Lab, NYU Abu Dhabi.</li>
+                    <li><strong class="text-navy font-semibold">[2026]</strong> Received the Chancellor's Award at UMass Amherst ($16,000).</li>
+                </ul>
             </div>
-            <br>
         </section>
-        
-        <footer></footer>
-    </div>
-    
-    <script src="./assets/js/scale.fix.js"></script>
+
+        <!-- Publications -->
+        <section class="mb-24 border-t border-line pt-12">
+            <div class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 mb-12">
+                <h2 class="text-sm font-bold text-silver uppercase tracking-widest">Publications</h2>
+                <p class="text-xs text-silver font-medium">* Equal contribution &nbsp;|&nbsp; &dagger; Corresponding author</p>
+            </div>
+            
+            <div class="space-y-16">
+                
+                <!-- Paper 1 -->
+                <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-xl font-bold text-navy">2026</span>
+                        <span class="text-xs font-semibold text-silver uppercase tracking-wider leading-snug">arXiv Preprint<br>cs.AI / cs.CL</span>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://arxiv.org/abs/2608.26189" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Paper</a>
+                            <a href="https://github.com/amribanerjee/Tool-use-Reliability" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Code</a>
+                            <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Abstract</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-3">Invocation-Level Reliability of Tool-Using Agents</h3>
+                        <p class="text-sm text-navy font-medium mb-4">Noorain, A.*, Mohanty, S.*, <span class="font-bold">Banerjee, A.</span>, &amp; Dasgupta, A.<sup>&dagger;</sup></p>
+                        <div class="abstract-content bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl">
+                            Tool-using agents fail two ways: choosing the wrong tool, or forming wrong arguments, and an early failure of either kind can silently corrupt everything downstream. We measure a correct-invocation rate that separates the two, under both a clean teacher-forced context and the model's own free-running context, on five open-weight models over contamination-free multi-step tasks (depths 1-8). By depth 6, roughly 70% of a model's own clean-context capability is lost to its own earlier mistakes (L6 = 0.686, 0.684). Our central finding concerns the measurement itself. Under exact-match scoring against a fixed gold trajectory, a propagation model's severity and recovery parameters are not merely hard to estimate - they are fixed by the scoring rule. Severity is forced to its boundary (0 of 869 poisoned steps correct); recovery is structurally unobservable (0 of 580 poisoned steps returned on-track, against an expected 0.0058 by chance). Both follow from one mechanism: post-divergence, the gold value is generated by tool constants the model never sees, so it is information the model cannot derive. A fit run anyway returns 0.92 and 0.73 for a quantity that is exactly 1.000 - confident numbers for a parameter the scoring rule already determined. We give the mechanism and a remedy, conditional-on-state scoring, applied retrospectively to cached completions at zero additional cost, which un-pins severity to interior estimates excluding zero (+0.149, +0.316).
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 2 -->
+                <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-xl font-bold text-navy">2026</span>
+                        <span class="text-xs font-semibold text-silver uppercase tracking-wider leading-snug">IEEE BHI</span>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://arxiv.org/abs/2610.01512" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Paper</a>
+                            <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Abstract</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-3">VoxelSynth3D: Interpretable Volumetric Image-Domain Metal Artifact Reduction with a Paired Synthetic CLINIC Benchmark</h3>
+                        <p class="text-sm text-navy font-medium mb-4"><span class="font-bold">Banerjee, A.</span>, Basit, A., Joseph, R. R., Innan, N., &amp; Shafique, M.</p>
+                        <div class="abstract-content bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl">
+                            Metal artifacts in postoperative musculoskeletal CT can obscure bone–implant and adjacent soft-tissue interfaces, limiting assessment of implant position, fracture fixation, loosening, infection, and periprosthetic complications. Many metal artifact reduction (MAR) methods either require raw projection access that is unavailable in retrospective reconstructed CT studies or rely on learned models whose behavior may shift across scanner protocols and implant appearances. We present VoxelSynth3D, a training-free 3D image-domain MAR framework for reconstructed CT. The method localizes correction to an implant-adaptive artifact support and uses inspectable support masks, normalized tissue priors, deviation-gated blending weights, and restricted edge-guided refinement to suppress artifacts while limiting changes to unaffected anatomy. We also construct a paired synthetic CLINIC-Metal benchmark from nometal CTPelvic1K pelvic CT volumes with clean targets, metal and artifact masks, reproducible implant insertion, and patientlevel splits. Because real metal CT lacks paired clean targets, 75 real CLINIC-metal cases are evaluated only with qualitative and no-reference metrics. The reported configuration was fixed as a conservative operating point inside a near-flat validation basin. On 40 synthetic test cases, VoxelSynth3D achieved lower artifactROI RMSE than the main comparators (785.43 HU versus 811.86 HU for input, 802.21 HU for pseudo LI-MAR, and 803.10 HU for InDuDoNet) and the highest ROI MSE reduction among them (6.33%). Paired ROI-RMSE testing favored VoxelSynth3D over each comparator after Holm correction, with the largest gains in high-artifact-size cases. These results support VoxelSynth3D as an interpretable reconstructed-volume MAR approach and provide a reproducible paired benchmark for future studies.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 3 -->
+                <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-xl font-bold text-navy">2026</span>
+                        <span class="text-xs font-semibold text-silver uppercase tracking-wider leading-snug">AIMS Workshop, COLM<br>IEEE MIT URTC</span>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://arxiv.org/abs/2608.13598" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Paper</a>
+                            <a href="https://github.com/amribanerjee/tbf-eval" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Code</a>
+                            <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Abstract</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-3">Measuring Cross-Task Behavioral Consistency in Language Model Agents</h3>
+                        <p class="text-sm text-navy font-medium mb-4">Raichura, P.* &amp; <span class="font-bold">Banerjee, A.*</span></p>
+                        <div class="abstract-content bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl">
+                            Agent evaluation relies almost entirely on outcome metrics such as success rate, which capture whether an agent succeeds but not how consistently it behaves. We argue that behavioral consistency across tasks is a distinct and measurable property, and we introduce the Behavioral Consistency Metric (BCM) to quantify it. BCM trains a model to predict task success from behavioral features of agent execution traces, derives a per-trajectory feature-attribution vector, and measures the mean pairwise similarity of these vectors within an agent system. Across roughly 9,000 trajectories from six language model agents on software engineering tasks, our central finding is that cross-task and within-task consistency are distinct axes that can diverge: some systems are locally reproducible, behaving similarly on repeated attempts at one task, yet globally fragmented, with no stable strategy across different tasks, while others are consistent at both scales. Prior work measures only same-task reproducibility and so cannot observe this separation. We further find that consistency is not reducible to success rate, since systems with comparable success can differ sharply in consistency, and that the frontier-versus-open-source consistency gap persists under a within-task control that holds task difficulty constant. We position BCM as a process-level reliability signal that complements outcome metrics, and we are explicit about the conditions under which it is meaningful.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 4 -->
+                <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-xl font-bold text-navy">2026</span>
+                        <span class="text-xs font-semibold text-silver uppercase tracking-wider leading-snug">arXiv Preprint<br>cs.MA / cs.AI</span>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://arxiv.org/abs/2607.22758" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Paper</a>
+                            <a href="https://github.com/amribanerjee/spectral-semantic-cascade" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Code</a>
+                            <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Abstract</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-3">Spectral Dynamics of Semantic Drift in Clinical Multi-Agent Language Model Networks</h3>
+                        <p class="text-sm text-navy font-medium mb-4"><span class="font-bold">Banerjee, A.</span></p>
+                        <div class="abstract-content bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl">
+                            The integration of iterative LLMs within multi-agent diagnostic frameworks requires a rigorous quantitative reevaluation of underlying communication topologies. Frequently used architectural paradigms depend on scale-free or small-world networks, assuming optimal communication efficiency. Our study mathematically dismantles that assumption for semantic data. By mapping multi-agent communication uncertainty trajectories onto a 768-dimensional Bio_ClinicalBERT embedding space via an analytical isotropic variance proxy using Barabási&ndash;Albert (BA) and Watts&ndash;Strogatz (WS) networks, we prove that structural bottlenecks compromise diagnostic safety. Our phase transition matrices illustrate that localized dense cliques confine hallucinated data, preventing global consensus and forcing the system toward a permanent entropy saturation threshold of H<sub>&infin;</sub> &approx; 5.947. As a result, we measure a severe terminal cosine similarity degradation of 53.29%, completely overwriting the original ground-truth. Moreover, the terminal semantic drift reveals a catastrophic variance amplification of 51.81% (&rho; = 1.5181) in highly clustered architectures, proving total system unpredictability when compared to Erdős&ndash;Rényi configurations (&rho; = 1.0766). Instead of reducing errors, hub-centric systems autonomously compound localized hallucinations. By introducing dynamic spectral monitoring operating at an O(N<sup>3</sup>) time complexity and imposing a strict lower bound on algebraic connectivity (&lambda;<sub>2 min</sub>) via the continuous eigen-decomposition of the graph Laplacian, we present a mathematically rigorous technique to ensure global state diffusion. Securing the reliability of autonomous medical diagnostics necessitates treating topological stability as a non-negotiable quantitative imperative.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 5 -->
+                <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-xl font-bold text-navy">2026</span>
+                        <span class="text-xs font-semibold text-silver uppercase tracking-wider leading-snug">The Convergence Journal</span>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://theconvergencejournal.org/publication/semantic-polarization-in-us-politics-a-computational-analysis-of-republican-and-democratic-speeches/" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Paper</a>
+                            <a href="https://github.com/amribanerjee/Political-Polarization-Analysis" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Code</a>
+                            <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Abstract</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-3">Semantic Polarization in U.S. Politics: A Computational Analysis of Republican and Democratic Speeches</h3>
+                        <p class="text-sm text-navy font-medium mb-4"><span class="font-bold">Banerjee, A.</span> &amp; Joneja, B.</p>
+                        <div class="abstract-content bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl">
+                            This research investigates the evolution of U.S. political rhetoric over the past eighty years, focusing on how thematic priorities and emotional framing have influenced partisan discourse. The study applies computational methods, including semantic similarity and sentiment analysis, to presidential nomination speeches from 1944 to 2024, with the aim of understanding patterns of ideological alignment, divergence, and rhetorical strategy. Beyond identifying these patterns in party messaging, the research examines how differences in thematic emphasis and emotional tone shape voter perception, engagement and political polarization. By combining quantitative linguistic analysis with historical and political context, the study provides insight into the mechanisms through which political language both mirrors and reinforces broader social and ideological divisions in the United States.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paper 6 -->
+                <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-xl font-bold text-navy">2025</span>
+                        <span class="text-xs font-semibold text-silver uppercase tracking-wider leading-snug">Researchory</span>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://www.researchory.com/wp-content/uploads/2025/09/Python-Driven-CT-Scan-Image-Refinement-1.pdf" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Paper</a>
+                            <a href="https://github.com/amribanerjee/Reconstruction-CT" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Code</a>
+                            <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Abstract</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-3">Python-Driven CT Scan Image Refinement</h3>
+                        <p class="text-sm text-navy font-medium mb-4"><span class="font-bold">Banerjee, A.*</span> &amp; Roplekar, S.*</p>
+                        <div class="abstract-content bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl">
+                            This study investigates the application of Artificial Intelligence (AI) in Computed Topography (CT) scans to enhance the image quality; this paper will also address the limitations in traditional methods and human interpretation. Utilizing Python, this research uses common AI-driven reconstruction techniques to reduce noise and remove artifacts from image scans. The methodology’s primary focus is to develop algorithms that leverage machine learning to identify and evaluate image patterns and optimize the reconstruction parameters. The results indicate that AI-powered reconstruction techniques significantly boost the image quality, yielding sharper images and a considerable reduction in noise and artifacts when compared with conventional methods. This facilitates improved pattern recognition and could aid in the detection of subtle features. This study highlights the potential of Python-based AI solutions to overcome current obstacles in image refinement and offers a promising avenue for more reliable computer-aided diagnostics.
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Books -->
+        <section class="mb-24 border-t border-line pt-12">
+            <h2 class="text-sm font-bold text-silver uppercase tracking-widest mb-12">Books</h2>
+            
+            <article class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start">
+                <div class="flex flex-col gap-3">
+                    <span class="text-xl font-bold text-navy">2020</span>
+                    <img src="617YFTjVOQL.jpg" alt="Introduction to Python Programming Cover" class="w-full border border-line mt-2">
+                    <div class="flex flex-col gap-2 mt-4">
+                        <a href="https://www.amazon.com/Introduction-Python-Programming-Amritesh-Banerjee/dp/B08JV1CDDQ" target="_blank" rel="noopener" class="border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none">Amazon</a>
+                        <button class="abs-btn border border-line px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-center hover:bg-navy hover:text-white hover:border-navy transition-none focus:outline-none">Reviews</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold leading-snug tracking-tight mb-2">Introduction to Python Programming</h3>
+                    <p class="text-sm text-navy font-medium mb-4"><span class="font-bold">Banerjee, A.</span></p>
+                    <p class="text-base text-navy leading-relaxed max-w-3xl">A comprehensive introduction to Python designed to bridge the gap between basic syntax and applied computational problem-solving. Structured to facilitate immediate practical application for new learners.</p>
+                    
+                    <div class="abstract-content mt-6 bg-surface border border-line p-5 text-sm text-silver leading-relaxed max-w-3xl space-y-4">
+                        <blockquote class="border-l-2 border-navy pl-4 italic">
+                            "Written in a simple and effective manner with very clear examples, this book serves as a good stepping-stone for anyone aspiring to quickly develop expertise in Python."
+                            <footer class="mt-2 text-xs not-italic font-semibold text-navy">&mdash; Dr. Dhrupad Mathur, SP Jain School of Global Management</footer>
+                        </blockquote>
+                        <blockquote class="border-l-2 border-navy pl-4 italic mt-4">
+                            "A perfect book for beginners with step by step understanding of the core concepts. A wonderful starting point for all school goers out to make big in the world of coding."
+                            <footer class="mt-2 text-xs not-italic font-semibold text-navy">&mdash; Dr. Ved Prakash Mishra, Amity University</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Experience & Education -->
+        <section class="grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 border-t border-line pt-12">
+            <h2 class="text-sm font-bold text-silver uppercase tracking-widest mt-1">Experience & Education</h2>
+            
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-[150px_1fr] gap-4 md:gap-8 items-baseline">
+                    <span class="text-sm font-bold text-navy">2026 &mdash; Present</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-navy">Incoming Research Intern, BioNLP Lab</h3>
+                        <p class="text-sm text-silver">University of Massachusetts Amherst</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-[150px_1fr] gap-4 md:gap-8 items-baseline">
+                    <span class="text-sm font-bold text-navy">2026 &mdash; Present</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-navy">Research Intern, eBrain Lab</h3>
+                        <p class="text-sm text-silver">New York University Abu Dhabi</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-[150px_1fr] gap-4 md:gap-8 items-baseline">
+                    <span class="text-sm font-bold text-navy">2026 &mdash; 2030</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-navy">BSc. Information and Computer Sciences</h3>
+                        <p class="text-sm text-silver">University of Massachusetts Amherst</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- UI Logic for Instant Snapping -->
     <script>
-        document.querySelectorAll('a[href]').forEach(function(link) {
-            link.target = '_blank';
-            link.rel = 'noopener';
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButtons = document.querySelectorAll('.abs-btn');
+            
+            toggleButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const container = btn.closest('article');
+                    if (!container) return;
+
+                    const content = container.querySelector('.abstract-content');
+                    if (content) {
+                        content.classList.toggle('open');
+                        
+                        // Invert button colors actively when open to show state
+                        if (content.classList.contains('open')) {
+                            btn.classList.add('bg-navy', 'text-white');
+                            btn.classList.remove('hover:bg-navy', 'hover:text-white');
+                        } else {
+                            btn.classList.remove('bg-navy', 'text-white');
+                            btn.classList.add('hover:bg-navy', 'hover:text-white');
+                        }
+                    }
+                });
+            });
         });
     </script>
 </body>
